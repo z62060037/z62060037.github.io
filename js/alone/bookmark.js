@@ -55,12 +55,14 @@ function createNewType() {
 
   //给所有a元素添加属性
   $("a").each(function (index) {
-    $(this).css("color", randomRgbColor());
+    $(this).css("color", getRandomRgbColor.getColor());
     $(this).attr("target", "_blank");
     $(this).attr("title", $(this).text());
   });
 
   $("h3:contains('欲')").hide();
+
+  $("title").text("个人书签");
 }
 
 // 自动展开
@@ -154,16 +156,15 @@ function bookmarkSpreadEvent() {
 // 页面滚动时固定工具栏到屏幕底部
 function pageScrollEvent() {
   $(window).scroll(function () {
-  
+
   });
 }
 
 // 宽度过小时，隐藏控制键文字
 function hideToolText() {
-  console.log($(window).width());
   if ($(window).width() < 560) {
     $(".tool_item>button>span").hide();
-  }else{
+  } else {
     $(".tool_item>button>span").show();
   }
 }
@@ -189,14 +190,62 @@ function bookmarkSearch() {
   });
 }
 
+var getRandomRgbColor = new randomRgbColor();
+//创建颜色库
+getRandomRgbColor.colors();
 
-//随机生成RGB颜色
+//随机返回RGB颜色
 function randomRgbColor() {
-  var r = Math.floor(Math.random() * 256);
-  var g = Math.floor(Math.random() * 256);
-  var b = Math.floor(Math.random() * 256);
-  return `rgb(${r},${g},${b})`;
+  //创建颜色库
+  this.colors = function () {
+    window.colorsArray = [];
+    for (var i = 0; i < 100; i++) {
+      colorsArray.push(getRandomRgbColor.randomRgbColor());
+    }
+    // console.log(colorsArray);
+  };
+  
+
+  //随机返回RGB颜色
+  this.randomRgbColor = function () {
+    var r = getRandomRgbColor.randomRgbColorNum();
+    var g = getRandomRgbColor.randomRgbColorNum();
+    var b = getRandomRgbColor.randomRgbColorNum();
+    return `rgb(${r},${g},${b})`;
+  }
+  // 返回颜色数值
+  this.randomRgbColorNum = function () {
+    var num = Math.floor(Math.random() * 256)
+    if (num >= 210) {
+      return getRandomRgbColor.randomRgbColorNum();
+    } else {
+      // 不返回浅色
+      return num;
+    }
+  }
+
+  this.getColorOrder = 0;
+  // 按顺序返回颜色库中的颜色
+  this.getColor = function () {
+    var order = getRandomRgbColor.getColorOrder;
+    if (order <= 50) {
+      getRandomRgbColor.getColorOrder++;
+      return colorsArray[order];
+    } else {
+      getRandomRgbColor.getColorOrder = 0;
+      return colorsArray[order];
+    }
+  }
 }
+
+
+
+
+
+
+
+
+
 
 
 

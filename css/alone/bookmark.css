@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   text-align: center;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -55,10 +56,10 @@ a:hover {
 
 .color1 {
   margin: 10px atuo;
-  padding: 5px;
   color: #4797e3;
   border: 2px solid #4797e3;
   border-radius: 5px;
+  line-height: 2rem;
 }
 
 .color1:hover {
@@ -70,6 +71,7 @@ a:hover {
   color: #6666ff;
   border: 1px solid #6666ff;
   border-radius: 5px;
+  line-height: 1.8rem;
 }
 
 .color2:hover {
@@ -166,7 +168,7 @@ button>i {
   background-image: url("../../src/icon/Storage/2/top.png");
 }
 
-#fold>i {
+#fold>i,#reset>i {
   background-image: url("../../src/icon/Storage/2/fold.png");
 }
 
@@ -215,7 +217,7 @@ button:active {
   vertical-align: top;
   margin-left: 10px;
   width: 250px;
-  height: 44px;
+  height: 42px;
   text-indent: 0.5em;
   font-size: 1.2em;
   border: 1px solid #d8d8d8;
