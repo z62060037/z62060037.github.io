@@ -17,9 +17,7 @@ $(function () {
 function createNewType() {
   // 删除无用内容
   $("h1:eq(0)").text("bookmarks");
-  $("dl:eq(0)>dt").remove();
-  $("dl:eq(0)>dd:last").contents().first().remove();
-  $("dl:eq(0)>dd:last>dl>dd:last").remove();
+  $("dl:eq(0)>dd:eq(0)").remove();
 
   // 收藏夹手风琴效果
   $("dl>dt>dl").hide();
@@ -28,26 +26,33 @@ function createNewType() {
   });
 
   //给书签列表项添加属性
-  $("body>dl:eq(0)>dd:eq(0)>dl:eq(0)>dt").each(function (index) {
+
+  $("body>dl:eq(0)>dt").each(function (index) {
     // let num = "a" + (index + 1);
     // $(this).attr("id", num);
     $(this).attr("listOrder", "1");
     $(this).children("h3:eq(0)").addClass("color1");
   });
 
-  $("body>dl:eq(0)>dd:eq(0)>dl:eq(0)>dt>dl>dt").each(function (index) {
+
+  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt").each(function (index) {
     $(this).attr("listOrder", "2");
-    $(this).children("dl>dt>h3:eq(0)").addClass("color2");
+    $(this).children("h3:eq(0)").addClass("color2");
   });
 
-  $("body>dl:eq(0)>dd:eq(0)>dl:eq(0)>dt>dl>dt>dl>dt").each(function (index) {
+  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>dl>dt").each(function (index) {
     $(this).attr("listOrder", "3");
     $(this).children("dl>dt>h3:eq(0)").addClass("color3");
   });
 
-  $("body>dl:eq(0)>dd:eq(0)>dl:eq(0)>dt>dl>dt>dl>dt>dl>dt").each(function (index) {
+  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>dl>dt>dl>dt").each(function (index) {
     $(this).attr("listOrder", "4");
     $(this).children("dl>dt>h3:eq(0)").addClass("color4");
+  });
+
+  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>dl>dt>dl>dt>dl>dt").each(function (index) {
+    $(this).attr("listOrder", "5");
+    $(this).children("dl>dt>h3:eq(0)").addClass("color5");
   });
 
 
@@ -140,7 +145,7 @@ function tools() {
 // 书签展开时时固定工具栏到屏幕底部
 function bookmarkSpreadEvent() {
 
-  $(document).on("click", "body>dl:eq(0)>dd:eq(0)>dl:eq(0)>dt>h3", function () {
+  $(document).on("click", "body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>h3", function () {
 
 
     console.log($(this).next("dl"));
