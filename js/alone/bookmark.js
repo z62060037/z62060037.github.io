@@ -35,25 +35,22 @@ function createNewType() {
   });
 
 
-  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt").each(function (index) {
+  $("body>dl:eq(0)>dt>dl>dt").each(function (index) {
     $(this).attr("listOrder", "2");
     $(this).children("h3:eq(0)").addClass("color2");
   });
 
-  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>dl>dt").each(function (index) {
+  $("body>dl:eq(0)>dt>dl>dt>dl>dt").each(function (index) {
     $(this).attr("listOrder", "3");
     $(this).children("dl>dt>h3:eq(0)").addClass("color3");
   });
 
-  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>dl>dt>dl>dt").each(function (index) {
+  $("body>dl:eq(0)>dt>dl>dt>dl>dt>dl>dt").each(function (index) {
     $(this).attr("listOrder", "4");
     $(this).children("dl>dt>h3:eq(0)").addClass("color4");
   });
 
-  $("body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>dl>dt>dl>dt>dl>dt").each(function (index) {
-    $(this).attr("listOrder", "5");
-    $(this).children("dl>dt>h3:eq(0)").addClass("color5");
-  });
+
 
 
   //给所有a元素添加属性
@@ -163,10 +160,11 @@ function pageScrollEvent() {
 
 // 宽度过小时，隐藏控制键文字
 function hideToolText() {
-  if ($(window).width() < 400) {
-    $("button p").hide();
+  console.log($(window).width());
+  if ($(window).width() < 560) {
+    $(".tool_item>button>span").hide();
   }else{
-    $("button p").show();
+    $(".tool_item>button>span").show();
   }
 }
 
