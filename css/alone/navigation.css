@@ -1,0 +1,508 @@
+/* * {
+  border: 0px solid black;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* text-align: center; */
+  /* height: 1080px; */
+}
+
+#header {
+  height: 30px;
+  min-width: 450px;
+  border-width: 1px;
+  border-style: none none solid none;
+  border-color: #dddddd;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+#header-wrap {
+  height: 100%;
+  margin: 0 30px;
+}
+
+/*
+.s_top_wrap iframe {
+  float: left;
+  margin: 5 10px;
+  font-size: 1em;
+}
+*/
+
+#weather {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  height: 25px;
+  margin: 5px 0;
+  overflow: hidden;
+}
+
+#clock {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  width: 180px;
+  height: 30px;
+  font-size: 16px;
+  color: #333;
+  border: 0px;
+  line-height: 30px;
+}
+
+#content, .s-content {
+  position: relative;
+  display: inline-block;
+  width: 890px;
+  left: 50%;
+  margin-left: -445px;
+  text-align: center;
+}
+
+.seach {
+  width: 890px;
+  margin: 150px auto;
+  -webkit-filter: grayscale(40%);
+  -moz-filter: grayscale(40%);
+  -ms-filter: grayscale(40%);
+  -o-filter: grayscale(40%);
+  filter: grayscale(40%);
+  filter: gray;
+}
+
+.seach:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+}
+
+.seach_from {
+  position: relative;
+  width: 640px;
+  height: 45px;
+  margin: 0 auto;
+}
+
+#baiduSeach {
+  display: inline-block;
+}
+
+#googleSeach {
+  display: none;
+}
+
+.seach_logo {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px;
+}
+
+#bd_logo {
+  background: url("../../src/icon/icon-40px.png") 0 0 no-repeat;
+}
+
+#google_logo {
+  background: url("../../src/icon/icon-40px.png") -40px 0 no-repeat;
+}
+
+.seach_input {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  width: 450px;
+  height: 40px;
+  text-indent: 0.5em;
+  font-size: 1.2em;
+  border: 1px solid #d8d8d8;
+  border-radius: 1px;
+}
+
+.seach_input:hover {
+  box-shadow: 2px 2px 3px #ccc;
+}
+
+.seach_button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 102px;
+  height: 44px;
+  color: #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+}
+
+#b_btn {
+  background-color: #3388ff;
+}
+
+#g_btn {
+  background-color: #4285f4;
+}
+
+/*导航栏编辑*/
+
+.edit-container {
+  position: relative;
+  margin: 0 auto;
+  width: 870px;
+  height: 36px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #03f;
+  opacity: 0;
+}
+
+.edit-container:hover {
+  opacity: 1;
+}
+
+.edit-container-right {
+  position: absolute;
+  width: 200px;
+  right: 50px;
+  box-shadow: 1px 1px 10px #ccc;
+  border-radius: 3px;
+}
+
+#add-container, #edit-container, #sort-container {
+  float: left;
+  border: 0px solid #03f;
+  padding: 5px;
+  margin: 2px 0px 2px 10px;
+}
+
+/*弹出层*/
+
+#elastic-background {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 150%;
+  background-color: black;
+  z-index: 1001;
+  -moz-opacity: 0.8;
+  opacity: 0.5;
+  filter: alpha(opacity=80);
+}
+
+#add-container-elastic {
+  position: absolute;
+  /*position: fixed;*/
+  margin: 0 auto;
+  top: 0px;
+  width: 870px;
+  height: 80px;
+  background-color: #f1f1f1;
+  z-index: 1002;
+  border-radius: 3px;
+}
+
+.sug-content {
+  margin: 20px 0;
+}
+
+.sug-name, .sug-link, .sug-dir-input {
+  display: inline-block;
+  text-indent: 0.5em;
+  font-size: 1em arial;
+  border: 1px solid #d8d8d8;
+  border-radius: 1px;
+  line-height: 28px;
+  vertical-align: top;
+}
+
+.sug-name {
+  width: 150px;
+  height: 28px;
+  margin-left: 30px;
+}
+
+.sug-link {
+  width: 250px;
+  height: 28px;
+  margin-left: 15px;
+}
+
+.sug-dir-input {
+  width: 120px;
+  height: 28px;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.sug-button {
+  display: inline-block;
+  text-indent: 0.3em;
+  width: 100px;
+  height: 28px;
+  padding: 1px 0px;
+  margin-left: 15px;
+  font-size: 1em arial;
+  background-color: #38f;
+  border: 0px;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 1px;
+  line-height: 28px;
+  vertical-align: top;
+}
+
+#collect {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 50px;
+  width: 870px;
+  padding: 10px;
+  box-shadow: 2px 2px 10px #ccc;
+  border-radius: 3px;
+}
+
+.nav-group {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 860px;
+  border-width: 0px;
+  border-color: #ccc;
+}
+
+.nav-group-name {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 100%;
+  margin-left: 20px;
+  border-width: 1px;
+  border-style: none none dashed none;
+  border-color: #dddddd;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+.nav-group-name-text {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  line-height: 40px;
+  height: 40px;
+  text-align: left;
+  font-size: 1em;
+}
+
+.nav-group-content {
+  position: relative;
+  display: inline-block;
+  width: 750px;
+  vertical-align: top;
+}
+
+.nav-group-unit {
+  float: left;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-width: 1px;
+  border-style: none none dashed none;
+  border-color: #dddddd;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.nav-group-unit:hover {
+  background-color: #f1f1f1e0;
+}
+
+.nav-group-unit>a {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.dir-item-last .dir-name {
+  float: left;
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 20px;
+  text-align: left;
+  font-size: 1em;
+  border-width: 1px;
+  border-color: #dddddd;
+  border-style: none;
+}
+
+.dir-item-last .nav-group-unit {
+  float: left;
+  width: 150px;
+  height: 30px;
+  padding-top: 10px;
+  font-size: 1em;
+  border-style: none;
+}
+
+.nav-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.nav-icon:hover {
+  height: 20px;
+  width: 20px;
+}
+
+.del-icon {
+  float: left;
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
+.del-icon>i {
+  display: inline-block;
+  /* 背景图按比例缩放 */
+  /* background-size: 100%; */
+}
+
+.icon-16px {
+  width: 16px;
+  height: 16px;
+  background-image: url("../src/icon/icon-16px.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.nav-text {
+  float: left;
+  padding-left: 5px;
+  color: #333;
+  vertical-align: top;
+}
+
+/* .bookmarks_css {
+  width: 800px;
+  height: 60px;
+  padding: 15px 15px;
+  border-width: 0px;
+  border-style: solid;
+  margin: 300px auto 0px;
+} */
+
+#bookmarks {
+  margin: 25px auto;
+  width: 800px;
+  height: 60px;
+  padding: 0 15px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: #03f;
+  box-shadow: 2px 2px 10px #ededed;
+  border-radius: 3px;
+  opacity: 1;
+}
+
+.bookmarks-item {
+  float: left;
+  margin: 9px;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: #94dcfe;
+  border-radius: 3px;
+}
+
+.bookmarks-item:hover {
+  border-style: solid;
+  border-color: #6bc1ff;
+  background-color: #6bc1ff;
+  box-shadow: 1px 1px 4px 1px #bdbdbd;
+}
+
+.bookmarks-item:active {
+  position: relative;
+  top: 2px;
+}
+
+.bookmarks-item>a {
+  padding: 9px;
+  text-decoration: none;
+  /*a元素去除修饰文本*/
+  color: #09f;
+  border: 0px;
+  font-size: 1.3em;
+  line-height: 40px;
+}
+
+.bookmarks-item>a:hover {
+  color: #fff;
+}
+
+.arrow {
+  animation: float 0.7s infinite alternate;
+  transition: background 0.4s, border 0.2s, margin 0.2s;
+}
+
+@keyframes float {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 5px;
+  }
+}
+
+/* 移动端 */
+
+.mobilePhone #header {
+  height: 80px;
+}
+
+.mobilePhone #header #clock {
+  font-size: 40px;
+  width: 50%;
+  line-height: 80px;
+  height: 80px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.mobilePhone .seach_from {
+  height: 130px;
+  width: 90%;
+}
+
+.mobilePhone .seach_logo{
+  transform: scale(1.5, 1.5);
+  margin-top: 12px;
+}
+
+.mobilePhone .seach_input {
+  height: 60px;
+  border: 2px solid #d8d8d8;
+}
+
+.mobilePhone .seach_button{
+  width: 150px;
+  height: 65px;
+  font-size: 30px;
+  line-height: 65px;
+  letter-spacing: 3px;
+}
