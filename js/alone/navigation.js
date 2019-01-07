@@ -16,6 +16,9 @@ $(function () {
 
   // 底部书签超链接生成
   bookmarksHyperlink();
+
+// 移动端自适应
+mobileAdaptation();
 });
 
 
@@ -197,7 +200,12 @@ $(window).scroll(function () {
 
 
 
-// 检测userAgent, 并跳转桌面或移动端页面;
-// if (navigator.userAgent.match(/(iPhone|iPod|Android|ios|iPad)/i)) {
-//   window.location = "http://www.54lxb.com/mobile.html";
-// }
+// 移动端自适应
+function mobileAdaptation() {
+  // alert(navigator.userAgent);
+  if (navigator.userAgent.match(/(AppleWebKit|iPhone|iPod|Android|ios|iPad)/i)) {
+    // 检测userAgent, 并跳转桌面或移动端页面;
+    // window.location = "http://www.54lxb.com/mobile.html";
+    $("#navigation").addClass("mobilePhone");
+  }
+}
