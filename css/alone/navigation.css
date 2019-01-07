@@ -3,6 +3,7 @@
 } */
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   -webkit-touch-callout: none;
@@ -42,10 +43,10 @@ body {
 #weather {
   position: absolute;
   display: inline-block;
-  left: 0;
+  left: 13px;
   height: 25px;
-  margin: 5px 0;
   overflow: hidden;
+  margin-top: 2px;
 }
 
 #clock {
@@ -120,6 +121,7 @@ body {
 }
 
 .seach_input {
+
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -128,6 +130,7 @@ body {
   height: 40px;
   text-indent: 0.5em;
   font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
   border: 1px solid #d8d8d8;
   border-radius: 1px;
 }
@@ -386,7 +389,7 @@ body {
 .icon-16px {
   width: 16px;
   height: 16px;
-  background-image: url("../src/icon/icon-16px.png");
+  background-image: url("../../src/icon/icon-16px.png");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
@@ -489,7 +492,7 @@ body {
   width: 90%;
 }
 
-.mobilePhone .seach_logo{
+.mobilePhone .seach_logo {
   transform: scale(1.5, 1.5);
   margin-top: 12px;
 }
@@ -499,7 +502,7 @@ body {
   border: 2px solid #d8d8d8;
 }
 
-.mobilePhone .seach_button{
+.mobilePhone .seach_button {
   width: 150px;
   height: 65px;
   font-size: 30px;
