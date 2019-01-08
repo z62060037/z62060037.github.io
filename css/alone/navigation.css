@@ -411,9 +411,13 @@ body {
 } */
 
 #bookmarks {
+  position: relative;
+  display: block;
   margin: 25px auto;
   width: 800px;
   height: 60px;
+  left: 50%;
+  margin-left: -400px;
   padding: 0 15px;
   border-width: 0px;
   border-style: solid;

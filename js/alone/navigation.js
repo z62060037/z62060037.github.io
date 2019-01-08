@@ -17,8 +17,8 @@ $(function () {
   // 底部书签超链接生成
   bookmarksHyperlink();
 
-// 移动端自适应
-mobileAdaptation();
+  // 移动端自适应
+  mobileAdaptation();
 });
 
 
@@ -203,9 +203,11 @@ $(window).scroll(function () {
 // 移动端自适应
 function mobileAdaptation() {
   // alert(navigator.userAgent);
-  if (navigator.userAgent.match(/(AppleWebKit|iPhone|iPod|Android|ios|iPad)/i)) {
-    // 检测userAgent, 并跳转桌面或移动端页面;
-    // window.location = "http://www.54lxb.com/mobile.html";
+  // 检测userAgent
+  if (navigator.userAgent.match(/(Windows)/i)) {
+    // Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+    // Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+  } else {
     $("#navigation").addClass("mobilePhone");
   }
 }

@@ -59,7 +59,8 @@ body {
 }
 
 .mobilePhone .nav-group-name {
-    display: block;
+    /* display: block; */
+    display: none;
     width: 100%;
 }
 
@@ -75,26 +76,27 @@ body {
     width: 100%;
 }
 
-
 .mobilePhone .nav-group-unit {
-    width: 33%;
-    height: 20rem;
-}
-
-.mobilePhone .nav-group-unit>a{
-    height: 20rem;
+    width: 25%;
+    height: 13rem;
+    border: none;
 }
 
 .mobilePhone .del-icon {
     width: 100%;
-    height: 14rem;
+    padding: 0;
 }
 
 .mobilePhone .del-icon>i {
-    width: 12rem;
-    height: 12rem;
-    margin: 10%;
-    background-size: 100% 100% !important;
+    width: 3rem;
+    height: 3rem;
+    margin: 0 3rem;
+    background-size: 80% 79% !important;
+    background-position: 41% 50%;
+    padding: 10%;
+    border: 0.2rem solid #80bdff;
+    border-radius: 1rem;
+    background-color: #ffffff;
 }
 
 .mobilePhone .nav-text {
@@ -105,6 +107,31 @@ body {
     line-height: 4rem;
 }
 
+.mobilePhone #bookmarks {
+    box-shadow: none;
+    padding: 0;
+    margin-top: 0;
+}
 
+.mobilePhone .bookmarks-item {
+    width: 25%;
+    margin: 0;
+    border: none;
+}
 
-.mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone .mobilePhone
+.mobilePhone .bookmarks-item>a {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    padding: 0;
+    margin: 0.5rem 10%;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 4rem;
+    border: 0.2rem solid #80bdff;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    
+    
+    
+}
