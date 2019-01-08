@@ -2,6 +2,9 @@
 
 
 $(function () {
+  // 移动端自适应
+  mobileAdaptation();
+
   // 创建新样式
   createNewType();
 
@@ -10,6 +13,8 @@ $(function () {
 
   // 自动展开
   autoExpand();
+
+
 });
 
 
@@ -63,6 +68,7 @@ function createNewType() {
   $("h3:contains('欲')").hide();
 
   $("title").text("个人书签");
+  $("h1:eq(0)").text("个人书签");
 }
 
 // 自动展开
@@ -102,7 +108,6 @@ function tools() {
   // $("#tool").insertBefore("h1:eq(0)");
   // $("#tool").css("display", "inline");
 
-
   $("#tool_filling").insertBefore("h1:eq(0)");
 
   // 宽度过小时，隐藏控制键文字
@@ -110,12 +115,6 @@ function tools() {
   $(window).resize(function () {
     hideToolText();
   });
-
-  // 书签展开时时固定工具栏到屏幕底部
-  // bookmarkSpreadEvent();
-
-  // 页面滚动时固定工具栏到屏幕底部
-  // pageScrollEvent();
 
   // 返回顶部
   $("#backTop").click(function () {
@@ -141,24 +140,6 @@ function tools() {
 
 }
 
-// 书签展开时时固定工具栏到屏幕底部
-function bookmarkSpreadEvent() {
-
-  $(document).on("click", "body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>h3", function () {
-
-
-    console.log($(this).next("dl"));
-    console.log($(this).next("dl").css("display"));
-    // if($(this).css("display")=="none")
-  });
-}
-
-// 页面滚动时固定工具栏到屏幕底部
-function pageScrollEvent() {
-  $(window).scroll(function () {
-
-  });
-}
 
 // 宽度过小时，隐藏控制键文字
 function hideToolText() {
@@ -204,7 +185,7 @@ function randomRgbColor() {
     }
     // console.log(colorsArray);
   };
-  
+
 
   //随机返回RGB颜色
   this.randomRgbColor = function () {
@@ -238,16 +219,27 @@ function randomRgbColor() {
   }
 }
 
+// 移动端自适应
+function mobileAdaptation() {
+  if (navigator.userAgent.match(/(Windows)/i)) {
+  } else {
+    $("body").addClass("mobilePhone");
+  }
+}
 
 
 
 
+/*
 
-
-
-
-
-
+// 书签展开时时固定工具栏到屏幕底部
+function bookmarkSpreadEvent() {
+  $(document).on("click", "body>dl:eq(0)>dt:eq(0)>dl:eq(0)>dt>h3", function () {
+    console.log($(this).next("dl"));
+    console.log($(this).next("dl").css("display"));
+    // if($(this).css("display")=="none")
+  });
+}
 
 // 获取所有元素ADD_DATE属性的值
 function listNum() {
@@ -265,15 +257,9 @@ function listNum() {
 }
 
 
-
-
-
-
-
-
-
-//页面未加载完前，添加遮挡内容
-// $("canvas").css("display", "inline");
-// if (document.readyState == "complete") {
-//   $("canvas").css("display", "none");
-// }
+// 页面未加载完前，添加遮挡内容
+$("canvas").css("display", "inline");
+if (document.readyState == "complete") {
+  $("canvas").css("display", "none");
+}
+*/

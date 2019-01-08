@@ -1,0 +1,41 @@
+.mobilePhone {
+    font-size: 16px;
+}
+
+.mobilePhone>#tool_filling {
+    height: 6rem;
+}
+
+.mobilePhone>#tool>.tool_item>button {
+    height: 5rem;
+    border-radius: 0.5rem;
+}
+
+.mobilePhone>#tool>.tool_item>button>i {
+    width: 3rem;
+    height: 3rem;
+}
+
+.mobilePhone>#tool>.tool_item>button>span {
+    font-size: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.mobilePhone>h1 {
+    font-size: 2.5rem;
+}
+
+.mobilePhone .color1,.mobilePhone .color2,.mobilePhone .color3,.mobilePhone .color4,.mobilePhone .color5 {
+    line-height: 4rem;
+    font-size: 2rem;
+    border-width: 0.2rem;
+    border-radius: 1.2rem;
+    margin: 1rem 10%;
+}
+
+
+.mobilePhone dt>a{
+    font-size: 2rem;
+    width: 80%;
+}
