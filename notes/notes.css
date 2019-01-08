@@ -1,0 +1,308 @@
+/* 常见块元素 block element  */
+
+address blockquote center dir div dl fieldset form h1 hr isindex menu noframes noscript ol p {
+    display: block;
+}
+
+/* 常见内联元素 inline element */
+
+a abbr acronym b bdo big br cite code dfn em font i img input kbd label q s samp select small span strike strong sub sup textarea tt u var {
+    display: inline;
+}
+
+/* h5新元素 */
+
+pre table ul article aside dialog footer header section footer nav figure menu {
+    content: '';
+}
+
+/*私有前缀（内核识别码）
+-moz,Mozilla内核--火狐Firefox浏览器
+-ms,微软IE浏览器
+-webkit,webkit内核--谷歌chrome、苹果safari浏览器  
+-o,欧朋opera浏览器        */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* 内容禁止选中 */
+    font-size: 16px;
+}
+
+/* @font-face {
+    font-family: 'fontawesome-webfont';  
+    src: url('../../font/fontawesome-webfont.ttf');      
+} */
+
+.reference {
+    position: fixed;
+    position: relative;
+    position: absolute;
+    content: '';
+    /*当font-size为16px时,2rem的长度相当于32px */
+    font-size: 1em Arial;
+    margin: 0;
+    padding: 0;
+    /*居中*/
+    text-align: center;
+    /* 文字行高 对齐文字和图片的高度 */
+    line-height: 40px;
+    display: inline-block;
+    /* 字体加粗 */
+    font-weight: bold;
+    /* 文字间距 */
+    letter-spacing: 5px;
+    /* 文字竖直排列 */
+    writing-mode: tb-rl;
+    display: none;
+    display: block;
+    display: inline;
+    display: inline-block;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -100;
+    color: #646464;
+    /* 圆角边框 */
+    border: 1px solid #d4ffcf;
+    background-color: #d4ffcf;
+    border-radius: 3px;
+    font-weight: normal;
+    border: 1px solid #d4ffcf;
+    /* 阴影 */
+    box-shadow: 1px 1px 1px #b0b0b0;
+    /* 文本缩进 */
+    text-indent: 15px;
+    /*a元素去除修饰文本*/
+    text-decoration: none;
+    /*过渡效果时间*/
+    transition: all 1s;
+    /*子元素将保留其 3D 位置*/
+    transform-style: preserve-3d;
+    /*3D 元素距视图的距离*/
+    perspective: 1000px;
+    /* 鼠标 加载中 */
+    cursor: wait;
+    /* 鼠标指示链接的指针（一只手） */
+    cursor: pointer;
+    /* 鼠标禁止点击 */
+    cursor: not-allowed;
+    /* 不占据空间，无法点击 */
+    display: none;
+    /* 占据空间，无法点击 */
+    visibility: hidden;
+    /* 占据空间，可以点击 透明  */
+    /*支持 Chrome, Opera, Safari 等浏览器*/
+    opacity: 0.50;
+    /* 兼容IE 浏览器  */
+    filter: Alpha(opacity=50);
+    /* FireFox 浏览器*/
+    -moz-opacity: 0.50;
+    /* 换行 */
+    /* 允许在单词内换行 */
+    word-break: break-all;
+    /* 允许长单词换行到下一行 */
+    word-wrap: break-word;
+    /* 不换行显示省略号 */
+    /*溢出内容会被修剪*/
+    overflow: hidden;
+    /* 文本不会换行，文本会在在同一行上继续 */
+    white-space: nowrap;
+    /* 文本不会换行，超出显示省略号 */
+    text-overflow: ellipsis;
+    /* 指定行数显示省略号 */
+    /* 仅谷歌可用 */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 动画 */
+
+#foldSidebar {
+    transition: all 0.5s;
+}
+
+#foldSidebar>i:hover {
+    animation: foldSidebarFloat 0.7s infinite alternate;
+    transition: background 0.4s, border 0.2s, margin 0.2s;
+}
+
+@keyframes foldSidebarFloat {
+    0% {
+        margin-left: -5px;
+    }
+    100% {
+        margin-right: 5px;
+    }
+}
+
+.reference:hover {
+    transform: rotateX(90deg);
+}
+
+.reference::after {
+    transform: scaleY(1.1);
+}
+
+.reference::before {
+    transform: translateZ(50px);
+}
+
+.reference:nth-child(1) {
+    transition-delay: 0.25s;
+}
+
+img {
+    background-image: url(../../src/icon/icon-16px.png);
+    background-repeat: no-repeat;
+    background-position: 0 -16px;
+    /* background-size: 100% 100%; */
+}
+
+/* 背景图片的路径是根据css文件的位置来判定的 */
+
+/* 确定取消按钮样式 */
+
+.cancelbutton {
+    float: right;
+    width: 65px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 15px;
+    border: 1px solid #8abaff;
+    color: #3c8cff;
+    background-color: #fff;
+}
+
+.cancelbutton:hover {
+    cursor: pointer;
+    color: #64a3fd;
+}
+
+.submitbutton {
+    float: right;
+    width: 65px;
+    height: 30px;
+    border: 1px solid #3c8cff;
+    margin-right: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #3c8cff;
+}
+
+.submitbutton:hover {
+    cursor: pointer;
+    background-color: #64a3fd;
+}
+
+/* 固定宽度的页面div水平居中 */
+
+#content {
+    width: 1400px;
+}
+
+.content-main {
+    margin: 0 auto;
+}
+
+/* 非固定宽度的页面让div设置居中 */
+
+/* 父div设置居中 */
+
+#content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+/* 子div将margin-left和margin-top设置为子div元素大小的一半，并为负值 */
+
+.content-main {
+    margin-left: -132px;
+    margin-top: -160px;
+    width: 265px;
+    min-height: 300px;
+}
+
+/* 下拉框倒三角实心箭头 */
+
+#favorites>span::after {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    content: "";
+    margin-left: .3em;
+    vertical-align: middle;
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-left: .3em solid transparent;
+}
+
+/* 表格 */
+
+.table {
+    width: 100%;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+
+.table td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+
+/* 表格td内容过多显示省略号 */
+
+table {
+    table-layout: fixed;
+}
+
+#table tr>td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* div缩放大小 */
+
+.waitZoomDiv {
+    transform: scale(2, 2);
+}
+
+/* 利用表格属性垂直居中div */
+
+.parentDiv {
+    position: relative;
+    text-align: center;
+    background: #1ea6f0;
+    width: 100px;
+    height: 50px;
+    display: table;
+}
+
+.verticalCenterDiv {
+    border: 1px solid #fff;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* 两个display属性值都为inline-block的div水平对齐 */
+/* 达到的效果效果和float:left类似 */
+.displayAlign{
+    vertical-align: top;
+}
