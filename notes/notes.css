@@ -306,3 +306,15 @@ table {
 .displayAlign{
     vertical-align: top;
 }
+
+/* 普通图 */
+.img{
+    background-image: url(../../src/icon/navigation/seach/bd_logo.png);
+    background-position: 0 0;
+    background-size: 100% 100%;
+}
+
+/* 雪碧图 */
+.img{
+    background: url("../../src/icon/navigation/icon-40px.png") 0 0 no-repeat;
+}

@@ -165,19 +165,19 @@ button>i {
 }
 
 #backTop>i {
-  background-image: url("../../src/icon/Storage/2/top.png");
+  background-image: url("../../src/icon/bookmarks/top.png");
 }
 
 #fold>i,#reset>i {
-  background-image: url("../../src/icon/Storage/2/fold.png");
+  background-image: url("../../src/icon/bookmarks/fold.png");
 }
 
 #search>i {
-  background-image: url("../../src/icon/Storage/2/search.png");
+  background-image: url("../../src/icon/bookmarks/search.png");
 }
 
 #spread>i {
-  background-image: url("../../src/icon/Storage/2/spread.png");
+  background-image: url("../../src/icon/bookmarks/spread.png");
 }
 
 button>span {

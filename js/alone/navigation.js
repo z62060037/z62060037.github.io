@@ -87,7 +87,7 @@ function navigationContentCreate(navData) {
     var row = " ";
     for (var j = 0; j < navData[i].groupContent.length; j++) {
       var single = " ";
-      single = "<div mark='" + i + "" + j + "' class='nav-group-unit'><a title='" + navData[i].groupContent[j].urlName + "' href='" + navData[i].groupContent[j].url + "' target='_blank'><div class='del-icon'><i class='icon-16px' alt='" + navData[i].groupContent[j].urlName + "' class='nav-icon'></i></div><div class='nav-text'>" + navData[i].groupContent[j].urlName + "</div></a></div>";
+      single = "<div mark='" + i + "" + j + "' class='nav-group-unit'><a title='" + navData[i].groupContent[j].internetSiteName + "' href='" + navData[i].groupContent[j].internetSite + "' target='_blank'><div class='del-icon'><i class='icon-16px' alt='" + navData[i].groupContent[j].internetSiteName + "' class='nav-icon'></i></div><div class='nav-text'>" + navData[i].groupContent[j].internetSiteName + "</div></a></div>";
       row += single;
     }
 
@@ -99,20 +99,29 @@ function navigationContentCreate(navData) {
   // 检测到有图标url时添加url
   for (var k = 0; k < navData.length; k++) {
     for (var l = 0; l < navData[k].groupContent.length; l++) {
-      var iconBackgroundUrl = navData[k].groupContent[l].iconBackgroundUrl;
-      var iconBackgroundPosition = navData[k].groupContent[l].iconBackgroundPosition;
-      // console.log(iconBackgroundUrl);
-      if (iconBackgroundUrl) {
+      var remoteIconUrl = navData[k].groupContent[l].remoteIconUrl;
+      var localIconUrl = navData[k].groupContent[l].localIconUrl;
+      // var iconBackgroundPosition = navData[k].groupContent[l].iconBackgroundPosition;
+      // console.log(remoteIconUrl);
+      if (remoteIconUrl) {
         $("[mark='" + k + "" + l + "'] i").css({
-          "background-image": "url(" + iconBackgroundUrl + ")",
-          "background-size": "100%"
+          "background-image": "url(" + remoteIconUrl + ")",
+          "background-size": "100% 100%"
         });
-      } else if (iconBackgroundPosition) {
-        // console.log(iconBackgroundPosition);
+      }else  if (localIconUrl) {
         $("[mark='" + k + "" + l + "'] i").css({
-          "background-position": "" + iconBackgroundPosition + ""
+          "background-image": "url(" + localIconUrl + ")",
+          "background-size": "100% 100%"
         });
       }
+      /*
+        else if (iconBackgroundPosition) {
+          $("[mark='" + k + "" + l + "'] i").css({
+            "background-position": "" + iconBackgroundPosition + ""
+          });
+        }
+      */
+
     }
   }
 }

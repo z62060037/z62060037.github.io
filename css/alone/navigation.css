@@ -111,14 +111,17 @@ body {
   height: 40px;
   width: 40px;
   margin: 0 10px;
+  background-position: 0 0;
+  background-size: 100% 100%;
 }
 
 #bd_logo {
-  background: url("../../src/icon/icon-40px.png") 0 0 no-repeat;
+  background-image: url(../../src/icon/navigation/seach/bd_logo.png);
 }
 
 #google_logo {
-  background: url("../../src/icon/icon-40px.png") -40px 0 no-repeat;
+  background-image: url(../../src/icon/navigation/seach/google_logo.jpg);
+ 
 }
 
 .seach_input {
