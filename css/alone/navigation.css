@@ -121,7 +121,6 @@ body {
 
 #google_logo {
   background-image: url(../../src/icon/navigation/seach/google_logo.jpg);
- 
 }
 
 .seach_input {
@@ -385,15 +384,8 @@ body {
 
 .del-icon>i {
   display: inline-block;
-  /* 背景图按比例缩放 */
-  /* background-size: 100%; */
-}
-
-.icon-16px {
   width: 16px;
   height: 16px;
-  background-image: url("../../src/icon/icon-16px.png");
-  background-position: 0 0;
   background-repeat: no-repeat;
 }
 
@@ -431,12 +423,16 @@ body {
 }
 
 .bookmarks-item {
-  float: left;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   margin: 9px;
   border-width: 1px;
   border-style: dashed;
   border-color: #94dcfe;
   border-radius: 3px;
+  width: 80px;
+  text-align: center;
 }
 
 .bookmarks-item:hover {

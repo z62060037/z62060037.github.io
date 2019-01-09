@@ -87,7 +87,7 @@ function navigationContentCreate(navData) {
     var row = " ";
     for (var j = 0; j < navData[i].groupContent.length; j++) {
       var single = " ";
-      single = "<div mark='" + i + "" + j + "' class='nav-group-unit'><a title='" + navData[i].groupContent[j].internetSiteName + "' href='" + navData[i].groupContent[j].internetSite + "' target='_blank'><div class='del-icon'><i class='icon-16px' alt='" + navData[i].groupContent[j].internetSiteName + "' class='nav-icon'></i></div><div class='nav-text'>" + navData[i].groupContent[j].internetSiteName + "</div></a></div>";
+      single = "<div mark='" + i + "" + j + "' class='nav-group-unit'><a title='" + navData[i].groupContent[j].internetSiteName + "' href='" + navData[i].groupContent[j].internetSite + "' target='_blank'><div class='del-icon'><i class='' alt='" + navData[i].groupContent[j].internetSiteName + "' class='nav-icon'></i></div><div class='nav-text'>" + navData[i].groupContent[j].internetSiteName + "</div></a></div>";
       row += single;
     }
 

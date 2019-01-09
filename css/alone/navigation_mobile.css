@@ -36,8 +36,8 @@ body {
 }
 
 .mobilePhone .seach_logo {
-    transform: scale(2, 2);
-    margin-top: 1.4rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 .mobilePhone .seach_input {
@@ -91,20 +91,21 @@ body {
     width: 3rem;
     height: 3rem;
     margin: 0 3rem;
-    background-size: 80% 79% !important;
-    background-position: 41% 50%;
+    background-size: 50% 50% !important;
+    background-position: 50% 50%;
     padding: 10%;
-    border: 0.2rem solid #80bdff;
-    border-radius: 1rem;
+    border: 0.3rem solid #80bdff;
+    border-radius: 50%;
     background-color: #ffffff;
 }
 
 .mobilePhone .nav-text {
-    font-size: 2rem;
-    text-align: center;
     width: 100%;
-    height: 6rem;
-    line-height: 4rem;
+    height: 3rem;
+    padding: 0;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 3rem;
 }
 
 .mobilePhone #bookmarks {
@@ -131,7 +132,4 @@ body {
     border: 0.2rem solid #80bdff;
     border-radius: 1rem;
     background-color: #ffffff;
-    
-    
-    
 }
