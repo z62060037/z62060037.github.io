@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日语五十音随机抽取</title>
+    <style>
+        div {
+            position: fixed;
+            display: inline-block;
+            left: 50%;
+            top: 50%;
+            margin-left: -30px;
+            margin-top: -80px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h1:hover {
+            cursor: pointer;
+        }
+
+        button {
+            width: 65px;
+            height: 30px;
+            border: 1px solid #3c8cff;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #3c8cff;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 id="hiragana"></h1>
+        <h1 id="katakana"></h1>
+        <button id="extractButton">抽取</button>
+    </div>
+
+    <script>
+        var japanFiftyTones = [
+            {
+                "syllable": "a",
+                "hiragana": "あ",
+                "katakana": "ア"
+            },
+            {
+                "syllable": "i",
+                "hiragana": "い",
+                "katakana": "イ"
+            },
+            {
+                "syllable": "u",
+                "hiragana": "う",
+                "katakana": "ウ"
+            },
+            {
+                "syllable": "e",
+                "hiragana": "え",
+                "katakana": "エ"
+            },
+            {
+                "syllable": "o",
+                "hiragana": "お",
+                "katakana": "オ"
+            },
+            {
+                "syllable": "ka",
+                "hiragana": "か",
+                "katakana": "カ"
+            },
+            {
+                "syllable": "ki",
+                "hiragana": "き",
+                "katakana": "キ"
+            },
+            {
+                "syllable": "ku",
+                "hiragana": "く",
+                "katakana": "ク"
+            },
+            {
+                "syllable": "ke",
+                "hiragana": "け",
+                "katakana": "ケ"
+            },
+            {
+                "syllable": "ko",
+                "hiragana": "こ",
+                "katakana": "コ"
+            },
+            {
+                "syllable": "sa",
+                "hiragana": "さ",
+                "katakana": "サ"
+            },
+            {
+                "syllable": "si",
+                "hiragana": "し",
+                "katakana": "シ"
+            },
+            {
+                "syllable": "su",
+                "hiragana": "す",
+                "katakana": "ス"
+            },
+            {
+                "syllable": "se",
+                "hiragana": "せ",
+                "katakana": "セ"
+            },
+            {
+                "syllable": "so",
+                "hiragana": "そ",
+                "katakana": "ソ"
+            },
+            {
+                "syllable": "ta",
+                "hiragana": "た",
+                "katakana": "タ"
+            },
+            {
+                "syllable": "chi",
+                "hiragana": "ち",
+                "katakana": "チ"
+            },
+            {
+                "syllable": "tsu",
+                "hiragana": "つ",
+                "katakana": "ツ"
+            },
+            {
+                "syllable": "te",
+                "hiragana": "て",
+                "katakana": "テ"
+            },
+            {
+                "syllable": "to",
+                "hiragana": "と",
+                "katakana": "ト"
+            },
+            {
+                "syllable": "na",
+                "hiragana": "な",
+                "katakana": "ナ"
+            },
+            {
+                "syllable": "ni",
+                "hiragana": "に",
+                "katakana": "ニ"
+            },
+            {
+                "syllable": "nu",
+                "hiragana": "ぬ",
+                "katakana": "ヌ"
+            },
+            {
+                "syllable": "ne",
+                "hiragana": "な",
+                "katakana": "ネ"
+            },
+            {
+                "syllable": "no",
+                "hiragana": "の",
+                "katakana": "ノ"
+            },
+            {
+                "syllable": "ha",
+                "hiragana": "は",
+                "katakana": "ハ"
+            },
+            {
+                "syllable": "hi",
+                "hiragana": "ひ",
+                "katakana": "ヒ"
+            },
+            {
+                "syllable": "hu",
+                "hiragana": "ふ",
+                "katakana": "フ"
+            },
+            {
+                "syllable": "he",
+                "hiragana": "へ",
+                "katakana": "ヘ"
+            },
+            {
+                "syllable": "ho",
+                "hiragana": "ほ",
+                "katakana": "ホ"
+            },
+            {
+                "syllable": "ma",
+                "hiragana": "ま",
+                "katakana": "マ"
+            },
+            {
+                "syllable": "mi",
+                "hiragana": "み",
+                "katakana": "ミ"
+            },
+            {
+                "syllable": "mu",
+                "hiragana": "む",
+                "katakana": "ム"
+            },
+            {
+                "syllable": "me",
+                "hiragana": "め",
+                "katakana": "メ"
+            },
+            {
+                "syllable": "mo",
+                "hiragana": "も",
+                "katakana": "モ"
+            },
+            {
+                "syllable": "ra",
+                "hiragana": "ら",
+                "katakana": "ラ"
+            },
+            {
+                "syllable": "ri",
+                "hiragana": "り",
+                "katakana": "リ"
+            },
+            {
+                "syllable": "ru",
+                "hiragana": "る",
+                "katakana": "ル"
+            },
+            {
+                "syllable": "re",
+                "hiragana": "れ",
+                "katakana": "レ"
+            },
+            {
+                "syllable": "ro",
+                "hiragana": "ろ",
+                "katakana": "ロ"
+            },
+            {
+                "syllable": "ya",
+                "hiragana": "や",
+                "katakana": "ヤ"
+            },
+            {
+                "syllable": "yu",
+                "hiragana": "ゆ",
+                "katakana": "ユ"
+            },
+            {
+                "syllable": "yo",
+                "hiragana": "よ",
+                "katakana": "ヨ"
+            },
+            {
+                "syllable": "wo",
+                "hiragana": "わ",
+                "katakana": "ワ"
+            },
+            {
+                "syllable": "wo",
+                "hiragana": "を",
+                "katakana": "ヲ"
+            },
+            {
+                "syllable": "n",
+                "hiragana": "ん",
+                "katakana": "ン"
+            }
+        ];
+
+            
+
+        // 抽取
+        extract();
+
+        function extract() {
+            var hiraganaNode = document.getElementById("hiragana");
+            var katakanaNode = document.getElementById("katakana");
+            var index = Math.floor((Math.random() * japanFiftyTones.length));
+            hiraganaNode.textContent = japanFiftyTones[index].hiragana;
+            katakanaNode.textContent =  japanFiftyTones[index].katakana;
+            hiraganaNode.setAttribute("title",japanFiftyTones[index].syllable);
+            katakanaNode.setAttribute("title",japanFiftyTones[index].syllable);
+            hiraganaNode.onclick = function () { extract(); };
+            katakanaNode.onclick = function () { extract(); };
+        }
+
+        var extractButtonNode = document.getElementById("extractButton");
+        extractButtonNode.onclick = function () {
+            extract();
+        };
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
