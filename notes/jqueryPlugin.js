@@ -176,10 +176,12 @@ function jqGrid() {
 
     // 修改表格数据
     if (JSON.stringify(rowData) !== '{}') {
+        // 修改行数据
         $(jqGridTableId).jqGrid("setRowData", jqGridTableRowId, {
             "fileName": originalData.fileName
         });
     } else {
+        // 添加行数据
         $(jqGridTableId).jqGrid("addRowData", jqGridTableRowId, {
             "fileName": originalData.fileName
         }, "last");
@@ -188,6 +190,7 @@ function jqGrid() {
 
 
     // 模糊搜索
+    // 修改参数并刷新
     $(jqGridTableId).jqGrid('setGridParam', {
         page: 1, postData: {
             "relationGroups": JSON.stringify([
@@ -201,8 +204,8 @@ function jqGrid() {
     }).trigger("reloadGrid");
 
 
-
-
+    // 获取页数
+    var pageNum=$(jqGridTableId).jqGrid("getGridParam", "page");
 
 
 }

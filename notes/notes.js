@@ -48,7 +48,7 @@ function dataType() {
 
 
     // 数值
-    function number() {
+    this.number= function () {
         // 数值转字符串
         var aaa = 111;
         aaa = aaa.toString();
@@ -67,7 +67,7 @@ function dataType() {
     }
 
     // 字符串
-    function string() {
+    this.string=function() {
 
 
         //字符串转数值
@@ -99,7 +99,7 @@ function dataType() {
     }
 
     // 正则表达式
-    function regular() {
+     this.regular=function() {
 
         /*
         非打印字符
@@ -586,7 +586,8 @@ function functionNote() {
         var aaa = parent.$("[name=aaa]").contents().find("#aaa").attr("aaa");
 
 
-
+        // 在ifeame页面js中调用父页面函数
+        window.parent.parentFunction();
     }
 
 }
