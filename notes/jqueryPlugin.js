@@ -205,7 +205,7 @@ function jqGrid() {
 
 
     // 获取页数
-    var pageNum=$(jqGridTableId).jqGrid("getGridParam", "page");
+    var pageNum = $(jqGridTableId).jqGrid("getGridParam", "page");
 
 
 }
@@ -317,8 +317,20 @@ function layer() {
     var parentBody = parent.layer.getChildFrame('body', parentIndex);
     parentBody.find("input[name='inputName']").val(inputVal);
 
+    //  通用 弹出层后回调
+    layer.open({
+        success: function (layero, index) {
+        }
+    });
 
 
+    //修改layer按钮样式
+    layero.find('.layui-layer-btn2').css({ "float": "left", "color": "#fff", "border-color": "#1E9FFF", "background-color": "#1E9FFF" });
+
+    // 加载动画 0代表加载的风格，支持0-2
+    // var loadIndex = layer.load(2, { shade: false }); 
+    // 加载完关闭加载动画
+    //  layer.close(loadIndex);
 }
 
 
@@ -328,7 +340,13 @@ var validateRules = {};
 var validateMessages = {};
 
 $("#form").validate({
+    // rules: {
+    //     logicSelect: "required"
+    // },
     rules: validateRules,
+    // messages: {
+    //     logicSelect: "这是必选项"
+    // },
     messages: validateMessages,
     agree: "required",
     //当表单获得焦点时清除错误信息
@@ -514,6 +532,9 @@ function item() {
                     type: "post",
                     dataType: "json",
                     async: true,
+                    // async: false,
+                    // 如果设置为异步，可能关闭页面的操作会中断传输。
+                    // 但如果把关闭页面的操作放入ajax的回调函数中，则关闭页面会出错。
                     success: function (data) {
                         if (data.errcode != 200) {
                             parent.layer.msg(data.errmsg, { icon: 2, time: 1500 });
