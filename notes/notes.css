@@ -157,6 +157,7 @@ body {
     transform: translateZ(50px);
 }
 
+/* 第一个匹配的元素 */
 .reference:nth-child(1) {
     transition-delay: 0.25s;
 }

@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- 该meta标签的作用是让当前viewport的宽度等于设备的宽度，同时不允许用户手动缩放。 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="#">
 
@@ -114,7 +115,9 @@
         </tr> -->
         <tr>
             <td></td>
-            <td><nobr>内容不换行</nobr></td>
+            <td>
+                <nobr>内容不换行</nobr>
+            </td>
         </tr>
     </table>
 
@@ -123,7 +126,7 @@
 
     <!-- validate 表单验证 -->
     <form id="aaa" action="">
-            <input name="productCode" required="required" type="text">
+        <input name="productCode" required="required" type="text">
     </form>
 
 
