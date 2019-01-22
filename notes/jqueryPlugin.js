@@ -331,6 +331,11 @@ function layer() {
     // var loadIndex = layer.load(2, { shade: false }); 
     // 加载完关闭加载动画
     //  layer.close(loadIndex);
+
+
+    // 在layer页面中调用另一layer页面的函数
+    var ontherLayerId = parent.$("#layerId>iframe:eq(0)").attr("id");
+    parent.document.getElementById(ontherLayerId).contentWindow.functionName();
 }
 
 

@@ -588,6 +588,8 @@ function functionNote() {
 
         // 在ifeame页面js中调用父页面函数
         window.parent.parentFunction();
+
+        
     }
 
 }
