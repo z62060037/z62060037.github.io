@@ -319,3 +319,14 @@ table {
 .img{
     background: url("../../src/icon/navigation/icon-40px.png") 0 0 no-repeat;
 }
+
+
+/* 颜色 */
+.color{
+    background-color: #00a5e2;
+    background-color: #f57070;
+    background-color: #ffb33e;
+    background-color: #6cc96c;
+    background-color: #d9d9d9;
+    background-color: #0072c5;
+}
