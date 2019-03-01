@@ -32,11 +32,15 @@ function declarativeAssignment() {
     console.log(name); //"max"
     window.name = "sar";
     console.log(name); //"sar"
-    
+
+    // 删除后两位
+    var a="123456";
+    b=a.slice(0, a.length - 2); // "1234"
+
 
     var newVal = oldVal; // 不会抛出错误，因为这是一次属性查询
     console.log(newVal); // 抛出错误，因为oldVal未定义
-    var newVal=window.oldVal; 
+    var newVal = window.oldVal;
     console.log(newVal); // undefined
 
 }
@@ -48,7 +52,7 @@ function dataType() {
 
 
     // 数值
-    this.number= function () {
+    this.number = function () {
         // 数值转字符串
         var aaa = 111;
         aaa = aaa.toString();
@@ -67,7 +71,7 @@ function dataType() {
     }
 
     // 字符串
-    this.string=function() {
+    this.string = function () {
 
 
         //字符串转数值
@@ -99,7 +103,7 @@ function dataType() {
     }
 
     // 正则表达式
-     this.regular=function() {
+    this.regular = function () {
 
         /*
         非打印字符
@@ -589,7 +593,7 @@ function functionNote() {
         // 在ifeame页面js中调用父页面函数
         window.parent.parentFunction();
 
-        
+
     }
 
 }
