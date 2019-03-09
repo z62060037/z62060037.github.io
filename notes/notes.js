@@ -75,8 +75,11 @@ function dataType() {
 
 
         //字符串转数值
-        parseInt("111");    //return  111
+
+        // 整数
         parseInt("1234blue");  //return  1234 
+        // 浮点数
+        parseFloat("12.34");  //return  12.34 
 
         // 替换字符
         // 正则
@@ -239,7 +242,7 @@ function dataType() {
             name: "abc",
             age: 11
         }
-        aaa.hasOwnProperty(name) //true
+        aaa.hasOwnProperty("name") //true
 
 
 
