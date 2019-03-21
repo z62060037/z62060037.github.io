@@ -34,8 +34,8 @@ function declarativeAssignment() {
     console.log(name); //"sar"
 
     // 删除后两位
-    var a="123456";
-    b=a.slice(0, a.length - 2); // "1234"
+    var a = "123456";
+    b = a.slice(0, a.length - 2); // "1234"
 
 
     var newVal = oldVal; // 不会抛出错误，因为这是一次属性查询
@@ -466,6 +466,24 @@ function statement() {
 
 // 函数
 function functionNote() {
+
+
+    // 捕获错误 移动端测试
+    onerror = handleErr
+    var handleErrTxt = ""
+
+    function handleErr(msg, url, l) {
+        handleErrTxt += "错误: " + msg + "\n"
+        handleErrTxt += "路径: " + url + " 行: " + l + ""
+        alert(handleErrTxt)
+        return true
+    }
+
+
+
+
+
+
 
     // 函数表达式 写法
     function expression() {
