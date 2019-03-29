@@ -66,8 +66,9 @@ function dataType() {
         Math.floor(5.4); //5
         // 返回介于 0 ~ 1 之间的一个随机数。
         Math.random();
-
-
+        // 返回绝对值
+        var aaa = -1;
+        Math.abs(aaa); //aaa=1;
     }
 
     // 字符串
@@ -1011,3 +1012,22 @@ function ECMAScript6() {
 
 
 
+// jQuery选择器
+function jQuery(){
+
+
+    // jQuery遍历方法
+
+    // 所有同胞元素
+    $("p").siblings(".selected")
+
+
+
+
+
+
+
+
+
+
+}
