@@ -32,11 +32,15 @@ function declarativeAssignment() {
     console.log(name); //"max"
     window.name = "sar";
     console.log(name); //"sar"
-    
+
+    // 删除后两位
+    var a = "123456";
+    b = a.slice(0, a.length - 2); // "1234"
+
 
     var newVal = oldVal; // 不会抛出错误，因为这是一次属性查询
     console.log(newVal); // 抛出错误，因为oldVal未定义
-    var newVal=window.oldVal; 
+    var newVal = window.oldVal;
     console.log(newVal); // undefined
 
 }
@@ -48,7 +52,7 @@ function dataType() {
 
 
     // 数值
-    this.number= function () {
+    this.number = function () {
         // 数值转字符串
         var aaa = 111;
         aaa = aaa.toString();
@@ -62,17 +66,21 @@ function dataType() {
         Math.floor(5.4); //5
         // 返回介于 0 ~ 1 之间的一个随机数。
         Math.random();
-
-
+        // 返回绝对值
+        var aaa = -1;
+        Math.abs(aaa); //aaa=1;
     }
 
     // 字符串
-    this.string=function() {
+    this.string = function () {
 
 
         //字符串转数值
-        parseInt("111");    //return  111
+
+        // 整数
         parseInt("1234blue");  //return  1234 
+        // 浮点数
+        parseFloat("12.34");  //return  12.34 
 
         // 替换字符
         // 正则
@@ -99,7 +107,7 @@ function dataType() {
     }
 
     // 正则表达式
-     this.regular=function() {
+    this.regular = function () {
 
         /*
         非打印字符
@@ -235,7 +243,7 @@ function dataType() {
             name: "abc",
             age: 11
         }
-        aaa.hasOwnProperty(name) //true
+        aaa.hasOwnProperty("name") //true
 
 
 
@@ -460,6 +468,24 @@ function statement() {
 // 函数
 function functionNote() {
 
+
+    // 捕获错误 移动端测试
+    onerror = handleErr
+    var handleErrTxt = ""
+
+    function handleErr(msg, url, l) {
+        handleErrTxt += "错误: " + msg + "\n"
+        handleErrTxt += "路径: " + url + " 行: " + l + ""
+        alert(handleErrTxt)
+        return true
+    }
+
+
+
+
+
+
+
     // 函数表达式 写法
     function expression() {
 
@@ -589,7 +615,7 @@ function functionNote() {
         // 在ifeame页面js中调用父页面函数
         window.parent.parentFunction();
 
-        
+
     }
 
 }
@@ -986,3 +1012,22 @@ function ECMAScript6() {
 
 
 
+// jQuery选择器
+function jQuery(){
+
+
+    // jQuery遍历方法
+
+    // 所有同胞元素
+    $("p").siblings(".selected")
+
+
+
+
+
+
+
+
+
+
+}

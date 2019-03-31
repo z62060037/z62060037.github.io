@@ -341,3 +341,9 @@ table {
 .bgcolor {
     background-image: linear-gradient(to right, #b0d6ff, #dcedffe8, #dff0ff, #ffffff);
 }
+
+/* 图标变灰色 */
+.iconChangeGray{
+    filter: grayscale(100%);
+}
+
