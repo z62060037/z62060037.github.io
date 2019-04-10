@@ -134,9 +134,9 @@
       "groupName": "图像",
       "groupContent": [
         {
-          "internetSiteName": "谷歌图片",
-          "internetSite": "https://www.google.com.hk/imghp?hl=zh-CN&amp;tab=wi",
-          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/8510.png"
+          "internetSiteName": "tineye",
+          "internetSite": "https://www.tineye.com/",
+          "remoteIconUrl": "https://www.tineye.com/favicon.ico"
         },
         {
           "internetSiteName": "Multi",
@@ -152,6 +152,11 @@
           "internetSiteName": "Pixiv",
           "internetSite": "http://www.iqdb.org/",
           "remoteIconUrl": "https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/81260.png"
+        },
+        {
+          "internetSiteName": "谷歌图片",
+          "internetSite": "https://www.google.com.hk/imghp?hl=zh-CN&amp;tab=wi",
+          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/8510.png"
         }
       ]
     },
@@ -167,6 +172,16 @@
           "internetSiteName": "京东商城",
           "internetSite": "http://www.iqdb.org/",
           "remoteIconUrl": "https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95541.png"
+        }
+      ]
+    },
+    {
+      "groupName": "自制",
+      "groupContent": [
+        {
+          "internetSiteName": "五十音随机",
+          "internetSite": "http://www.54lxb.com/pages/alone/JapaneseSyllabaryExtraction.html",
+          "remoteIconUrl": "../../src/icon/navigation/favicon/colourstar.png"
         }
       ]
     }
