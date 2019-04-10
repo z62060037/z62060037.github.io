@@ -133,3 +133,12 @@ body {
     border-radius: 1rem;
     background-color: #ffffff;
 }
+
+.mobilePhone .bookmarks-item[couldClick='no'] {
+    background-color: #ffffff;
+}
+
+.mobilePhone .bookmarks-item[couldClick='no']>a {
+    border-color: #aeaeae;
+    background-color: #ccc;
+}
