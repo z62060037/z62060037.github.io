@@ -115,6 +115,10 @@ body {
   background-size: 100% 100%;
 }
 
+.seach_logo:hover {
+  cursor: pointer;
+}
+
 #bd_logo {
   background-image: url(../../src/icon/navigation/seach/bd_logo.png);
 }
@@ -465,6 +469,19 @@ body {
 
 .bookmarks-item>a:hover {
   color: #fff;
+}
+
+.bookmarks-item[couldClick='no'] {
+  border-color: #aeaeae;
+  background-color: #ccc;
+}
+
+.bookmarks-item[couldClick='no']>a {
+  color: #ffffff;
+}
+
+.bookmarks-item[couldClick='no']>a:hover {
+  cursor: not-allowed;
 }
 
 .arrow {

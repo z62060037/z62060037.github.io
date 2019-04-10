@@ -17,6 +17,9 @@ $(function () {
   // 底部书签超链接生成
   bookmarksHyperlink();
 
+  //  底部书签超链接验证
+  bookmarksHyperlinkVerify();
+
   // 移动端自适应
   mobileAdaptation();
 });
@@ -108,7 +111,7 @@ function navigationContentCreate(navData) {
           "background-image": "url(" + remoteIconUrl + ")",
           "background-size": "100% 100%"
         });
-      }else  if (localIconUrl) {
+      } else if (localIconUrl) {
         $("[mark='" + k + "" + l + "'] i").css({
           "background-image": "url(" + localIconUrl + ")",
           "background-size": "100% 100%"
@@ -173,13 +176,43 @@ function bookmarksHyperlink() {
     success: function (data) {
       var bookmarkData = data.navFooterData;
       for (var i = 0; i < bookmarkData.length; i++) {
-        $("#bookmarks").append("<div class='bookmarks-item'><a title='" + bookmarkData[i] + "' href='bookmarks.html?anchor=" + bookmarkData[i] + "'  target='_blank'>" + bookmarkData[i] + "</a></div>");
+        // $("#bookmarks").append("<div class='bookmarks-item'><a title='" + bookmarkData[i] + "' href='bookmarks.html?anchor=" + bookmarkData[i] + "'   target='_blank'>" + bookmarkData[i] + "</a></div>");
+        $("#bookmarks").append("<div class='bookmarks-item' hyperlink='bookmarks.html?anchor=" + bookmarkData[i] + "' couldClick='no'><a title='" + bookmarkData[i] + "'   target='_blank'>" + bookmarkData[i] + "</a></div>");
       }
     },
     error: function (data) {
       console.log("数据获取失败" + data);
     }
   });
+}
+
+// 111 底部书签超链接验证
+function bookmarksHyperlinkVerify() {
+
+  var accessVerify = [];
+
+
+
+  $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
+    if ($(this).attr("couldClick") == "yes") {
+      var hyperlink = $(this).attr("hyperlink");
+      window.open(hyperlink);
+
+    } else if ($(this).attr("couldClick") == "no") {
+      var thisOrder = $(this).index();
+      var reverseOrder = $("#bookmarks>.bookmarks-item").length - thisOrder;
+      accessVerify.push(reverseOrder);
+      console.log(accessVerify)
+
+      if (accessVerify.indexOf(1) > -1 && accessVerify.indexOf(2) > -1 && accessVerify.indexOf(3) > -1) {
+        $("#bookmarks>.bookmarks-item").attr("couldClick", "yes");
+      }
+
+      // layer.msg('无权限', { icon: 2, time: 1000 });
+    }
+  });
+
+
 }
 
 
