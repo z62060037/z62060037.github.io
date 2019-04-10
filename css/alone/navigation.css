@@ -450,6 +450,7 @@ body {
   border-color: #6bc1ff;
   background-color: #6bc1ff;
   box-shadow: 1px 1px 4px 1px #bdbdbd;
+  cursor: pointer;
 }
 
 .bookmarks-item:active {

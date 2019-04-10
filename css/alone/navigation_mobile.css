@@ -56,6 +56,7 @@ body {
 
 .mobilePhone #collect {
     box-shadow: none;
+    border: none;
 }
 
 .mobilePhone .nav-group-name {
