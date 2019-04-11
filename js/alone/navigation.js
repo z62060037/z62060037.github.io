@@ -106,14 +106,14 @@ function navigationContentCreate(navData) {
       var localIconUrl = navData[k].groupContent[l].localIconUrl;
       // var iconBackgroundPosition = navData[k].groupContent[l].iconBackgroundPosition;
       // console.log(remoteIconUrl);
-      if (remoteIconUrl) {
-        $("[mark='" + k + "" + l + "'] i").css({
-          "background-image": "url(" + remoteIconUrl + ")",
-          "background-size": "100% 100%"
-        });
-      } else if (localIconUrl) {
+      if (localIconUrl) {
         $("[mark='" + k + "" + l + "'] i").css({
           "background-image": "url(" + localIconUrl + ")",
+          "background-size": "100% 100%"
+        });
+      } else if (remoteIconUrl) {
+        $("[mark='" + k + "" + l + "'] i").css({
+          "background-image": "url(" + remoteIconUrl + ")",
           "background-size": "100% 100%"
         });
       }

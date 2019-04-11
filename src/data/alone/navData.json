@@ -6,7 +6,8 @@
         {
           "internetSiteName": "高德地图",
           "internetSite": "http://ditu.amap.com/",
-          "remoteIconUrl": "http://ditu.amap.com/favicon.ico"
+          "remoteIconUrl": "http://ditu.amap.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/amap.ico"
         },
         {
           "internetSiteName": "自制导航",
@@ -26,22 +27,26 @@
         {
           "internetSiteName": "百度贴吧",
           "internetSite": "http://tieba.baidu.com/home/main?fr=userbar&amp;id=9f04457465726e616c44757479272d",
-          "remoteIconUrl": "https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/2556.png?3"
+          "remoteIconUrl": "https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/2556.png?3",
+          "localIconUrl": "../../src/icon/navigation/favicon/baidu_tieba.png"
         },
         {
           "internetSiteName": "百度网盘",
           "internetSite": "http://pan.baidu.com/",
-          "remoteIconUrl": "https://pan.baidu.com/box-static/disk-system/images/favicon.ico"
+          "remoteIconUrl": "https://pan.baidu.com/box-static/disk-system/images/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/baidu_pan.ico"
         },
         {
           "internetSiteName": "嗶哩嗶哩",
           "internetSite": "http://www.bilibili.tv/",
-          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/7718.png?1"
+          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/7718.png?1",
+          "localIconUrl": "../../src/icon/navigation/favicon/bilibili.png"
         },
         {
           "internetSiteName": "游民星空",
           "internetSite": "http://www.gamersky.com/",
-          "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/95520.png"
+          "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/95520.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/gamersky.png"
         },
         {
           "internetSiteName": "舰R资料库",
@@ -51,27 +56,32 @@
         {
           "internetSiteName": "FGO攻略站",
           "internetSite": "https://fgo.umowang.com/",
-          "remoteIconUrl": "https://fgo.umowang.com/favicon.ico"
+          "remoteIconUrl": "https://fgo.umowang.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/umowang.ico"
         },
         {
           "internetSiteName": "FF14物品搜索",
           "internetSite": "http://ff14.huijiwiki.com/wiki/ItemSearch",
-          "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png"
+          "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/internet.png"
         },
         {
           "internetSiteName": "知乎",
           "internetSite": "https://www.zhihu.com/explore",
-          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/10678.png"
+          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/10678.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/zhihu.png"
         },
         {
           "internetSiteName": "斗鱼",
           "internetSite": "https://www.douyu.com/room/follow",
-          "remoteIconUrl": "http://www.douyu.com/favicon.ico"
+          "remoteIconUrl": "http://www.douyu.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/douyu.ico"
         },
         {
           "internetSiteName": "虎牙",
           "internetSite": "https://i.huya.com/index.php?m=Subscribe",
-          "remoteIconUrl": "http://i.huya.com/favicon.ico"
+          "remoteIconUrl": "http://i.huya.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/huya.ico"
         }
       ]
     },
@@ -81,12 +91,14 @@
         {
           "internetSiteName": "菜鸟教程",
           "internetSite": "http://www.runoob.com/",
-          "remoteIconUrl": "http://www.runoob.com/favicon.ico"
+          "remoteIconUrl": "http://www.runoob.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/runoob.ico"
         },
         {
-          "internetSiteName": "Github",
+          "internetSiteName": "github",
           "internetSite": "https://github.com/",
-          "remoteIconUrl": "https://github.com/favicon.ico"
+          "remoteIconUrl": "https://github.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/github.ico"
         },
         {
           "internetSiteName": "w3cschool",
@@ -101,7 +113,8 @@
         {
           "internetSiteName": "日语五十音",
           "internetSite": "https://jp.hjenglish.com/subject/pronounce/",
-          "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png"
+          "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/internet.png"
         }
       ]
     },
@@ -111,17 +124,20 @@
         {
           "internetSiteName": "菜鸟工具",
           "internetSite": "https://c.runoob.com/",
-          "remoteIconUrl": "http://cdn.static.runoob.com/images/favicon.ico"
+          "remoteIconUrl": "http://cdn.static.runoob.com/images/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/runoob.ico"
         },
         {
           "internetSiteName": "Web在线编辑器",
           "internetSite": "https://c.runoob.com/front-end/61",
-          "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png"
+          "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/runoob.ico"
         },
         {
           "internetSiteName": "谷歌翻译",
           "internetSite": "https://translate.google.cn/",
-          "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png"
+          "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/google.png"
         },
         {
           "internetSiteName": "影之空间SS",
@@ -136,27 +152,32 @@
         {
           "internetSiteName": "tineye",
           "internetSite": "https://www.tineye.com/",
-          "remoteIconUrl": "https://www.tineye.com/favicon.ico"
+          "remoteIconUrl": "https://www.tineye.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/tineye.ico"
         },
         {
           "internetSiteName": "Multi",
           "internetSite": "http://www.iqdb.org/",
-          "remoteIconUrl": "http://www.iqdb.org/favicon.ico"
+          "remoteIconUrl": "http://www.iqdb.org/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/iqdb.ico"
         },
         {
           "internetSiteName": "SauceNAO",
           "internetSite": "http://saucenao.com/",
-          "remoteIconUrl": "http://saucenao.com/favicon.ico"
+          "remoteIconUrl": "http://saucenao.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/saucenao.bmp"
         },
         {
           "internetSiteName": "Pixiv",
-          "internetSite": "http://www.iqdb.org/",
-          "remoteIconUrl": "https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/81260.png"
+          "internetSite": "http://www.pixiv.net/",
+          "remoteIconUrl": "https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/81260.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/pixiv.png"
         },
         {
           "internetSiteName": "谷歌图片",
           "internetSite": "https://www.google.com.hk/imghp?hl=zh-CN&amp;tab=wi",
-          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/8510.png"
+          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/8510.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/google.png"
         }
       ]
     },
@@ -166,12 +187,14 @@
         {
           "internetSiteName": "淘宝网",
           "internetSite": "http://www.taobao.com/",
-          "remoteIconUrl": "https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/95487.png"
+          "remoteIconUrl": "https://ss3.bdstatic.com/iPoZeXSm1A5BphGlnYG/icon/95487.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/taobao.png"
         },
         {
           "internetSiteName": "京东商城",
           "internetSite": "http://www.iqdb.org/",
-          "remoteIconUrl": "https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95541.png"
+          "remoteIconUrl": "https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95541.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/iqdb.png"
         }
       ]
     },
