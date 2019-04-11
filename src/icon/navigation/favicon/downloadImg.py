@@ -2,10 +2,6 @@ import os,stat
 import urllib.request
 import json
 import re
-from urlparse import urlparse 
-
-topHostPostfix = ('.com','.la','.io','.co','.info','.net','.org','.me','.mobi','.us','.biz','.xxx','.ca','.co.jp','.com.cn','.net.cn','.org.cn','.mx','.tv','.ws','.ag','.com.ag','.net.ag','.org.ag','.am','.asia','.at','.be','.com.br','.net.br','.bz','.com.bz','.net.bz','.cc','.com.co','.net.co','.nom.co','.de','.es','.com.es','.nom.es','.org.es','.eu','.fm','.fr','.gs','.in','.co.in','.firm.in','.gen.in', '.ind.in','.net.in','.org.in','.it','.jobs','.jp','.ms','.com.mx','.nl','.nu','.co.nz','.net.nz','.org.nz','.se','.tc','.tk','.tw','.com.tw','.idv.tw','.org.tw','.hk','.co.uk','.me.uk','.org.uk','.vg', ".com.hk")
-
 
 # 读取json文件
 with open('../../../data/alone/navData.json', 'r', encoding='utf8') as f:
@@ -32,15 +28,6 @@ with open('../../../data/alone/navData.json', 'r', encoding='utf8') as f:
 # 从url提取图片名
 def getImgName(internetSite):
      
-    regx = r'[^\.]+('+'|'.join([h.replace('.',r'\.') for h in topHostPostfix])+')$'
-    pattern = re.compile(regx,re.IGNORECASE)
-    parts = urlparse(internetSite)
-    host = parts.netloc
-    m = pattern.search(host)
-    res =  m.group() 
-    return res
-    # if m else host
-    # print "unkonw" if not res else res
     
 
 
