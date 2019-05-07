@@ -192,7 +192,7 @@
         },
         {
           "internetSiteName": "京东商城",
-          "internetSite": "http://www.iqdb.org/",
+          "internetSite": "https://www.jd.com/",
           "remoteIconUrl": "https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95541.png",
           "localIconUrl": "../../src/icon/navigation/favicon/iqdb.png"
         }
