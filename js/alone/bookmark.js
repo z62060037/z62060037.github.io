@@ -2,6 +2,9 @@
 
 
 $(function () {
+  // 添加顶栏工具
+  addHeaderContent();
+
   // 移动端自适应
   mobileAdaptation();
 
@@ -16,6 +19,50 @@ $(function () {
 
 
 });
+
+// 添加顶栏工具
+function addHeaderContent() {
+  $("#header").html(`
+  
+  <div id="tool_filling"></div>
+
+  <div id="tool" class="tool">
+      <div class="tool_item">
+          <button id='backTop'>
+              <i></i>
+              <span>返回顶部</span>
+          </button>
+          <button id='fold'>
+              <i></i>
+              <span>折叠全部</span>
+          </button>
+          <button id='search'>
+              <i></i>
+              <span>搜索链接</span>
+          </button>
+          <button id='spread'>
+              <i></i>
+              <span>展开全部</span>
+          </button>
+      </div>
+      <div class="tool_item">
+          <div id="bookmarkSearch">
+              <input id="bookmarkSearch_input" type="text" placeholder="输入内容开始搜索">
+          </div>
+          <button id='reset'>
+              <i></i>
+              <span>重置</span>
+          </button>
+      </div>
+  </div>
+  
+  
+  
+  `)
+
+
+
+}
 
 
 // 创建新样式
