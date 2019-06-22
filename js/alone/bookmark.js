@@ -20,6 +20,15 @@ $(function () {
 
 });
 
+// 移动端自适应
+function mobileAdaptation() {
+  if (navigator.userAgent.match(/(Windows)/i)) {
+  } else {
+    $("body").addClass("mobilePhone");
+  }
+}
+
+
 // 添加顶栏工具
 function addHeaderContent() {
   $("#header").html(`
@@ -266,13 +275,6 @@ function randomRgbColor() {
   }
 }
 
-// 移动端自适应
-function mobileAdaptation() {
-  if (navigator.userAgent.match(/(Windows)/i)) {
-  } else {
-    $("body").addClass("mobilePhone");
-  }
-}
 
 
 
