@@ -23,6 +23,13 @@
     margin-right: 0.5rem;
 }
 
+.mobilePhone #bookmarkSearch_input {
+    height: 6rem;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    width: 20rem;
+}
+
 .mobilePhone>h1 {
     font-size: 4.5rem;
     margin: 2rem auto;
