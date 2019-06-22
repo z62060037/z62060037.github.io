@@ -77,11 +77,18 @@ body {
     width: 100%;
 }
 
+
 .mobilePhone .nav-group-unit {
     width: 25%;
     height: 13rem;
     border: none;
+    padding-top: 1rem;
 }
+
+.mobilePhone .nav-group-unit:hover {
+    background-color: #ffffff00;
+}
+
 
 .mobilePhone .del-icon {
     width: 100%;
@@ -121,6 +128,10 @@ body {
     border: none;
 }
 
+.mobilePhone .bookmarks-item:hover {
+    background-color: #ffffff;
+}
+
 .mobilePhone .bookmarks-item>a {
     position: relative;
     display: inline-block;
@@ -133,6 +144,10 @@ body {
     border: 0.2rem solid #80bdff;
     border-radius: 1rem;
     background-color: #ffffff;
+}
+
+.bookmarks-item>a:hover {
+    color: #6bc1ff;
 }
 
 .mobilePhone .bookmarks-item[couldClick='no'] {

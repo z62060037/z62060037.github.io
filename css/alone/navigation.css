@@ -71,6 +71,11 @@ body {
   text-align: center;
 }
 
+#seach {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .seach {
   width: 890px;
   margin: 150px auto;

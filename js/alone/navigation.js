@@ -196,7 +196,7 @@ function bookmarksHyperlinkVerify() {
   $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
     if ($(this).attr("couldClick") == "yes") {
       var hyperlink = $(this).attr("hyperlink");
-      window.open(hyperlink);
+      // window.open(hyperlink);
 
     } else if ($(this).attr("couldClick") == "no") {
       var thisOrder = $(this).index();
