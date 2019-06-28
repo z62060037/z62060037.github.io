@@ -22,7 +22,100 @@ $(function () {
 
   // 移动端自适应
   mobileAdaptation();
+
+  // 玩具
+  // play();
 });
+
+function play() {
+  $("#navigation").append(`
+    <div id="play"></div>
+  `)
+
+  // 按键监听
+  $(document).keydown(function (event) {
+    // if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+    //     console.log('按下了← ↑ ↓ →');
+    // }
+    // if (event.keyCode == 13) {
+    //     console.log('按下了Enter');
+    // }
+
+    console.log('按下了：' + event.keyCode);
+
+    var $playNode = $("#play");
+
+    if (event.keyCode == 37) {
+      console.log('按下了← ');
+      // 获取现在的位置
+      var nowleft = $playNode.css("left");
+      nowleft = parseInt(nowleft);
+      if (nowleft > 10) {
+        nowleft = nowleft - 10;
+      }
+      $playNode.css("left", nowleft + "px");
+
+    }
+
+    if (event.keyCode == 39) {
+      console.log('按下了→ ');
+      // 获取现在的位置
+      var nowleft = $playNode.css("left");
+      nowleft = parseInt(nowleft);
+      nowleft = nowleft + 10;
+      $playNode.css("left", nowleft + "px");
+
+    }
+
+    if (event.keyCode == 32) {
+      console.log('按下了空格 ');
+      // 获取现在的位置
+      var nowTop = $playNode.css("top");
+      nowTop = parseInt(nowTop);
+
+      //  延迟执行多次
+      var nodeUP = setInterval(function () {
+        nowleft = parseInt(nowleft);
+        if(nowTop>10){
+          nowTop = nowTop - 10;
+        }
+        console.log(nowTop);
+        $playNode.css("top", nowTop + "px");
+      }, 100);
+
+      // 取消延迟执行多次
+      setTimeout(function () {
+        clearInterval(nodeUP);
+      }, 2000);
+
+      //  延迟执行多次
+      var nodeDown = setInterval(function () {
+        nowleft = parseInt(nowleft);
+        nowTop = nowTop + 10;
+        $playNode.css("top", nowTop + "px");
+      }, 100);
+      // 取消延迟执行多次
+      setTimeout(function () {
+        clearInterval(nodeDown);
+      }, 2000);
+      
+      
+
+    }
+  });
+
+}
+
+// 跳跃
+function playJump() {
+  var $playNode = $("#play");
+
+
+
+
+}
+
+
 
 
 
