@@ -17,8 +17,14 @@ $(function () {
   // 自动展开
   autoExpand();
 
-
+  // 18R设置
+  hSet();
 });
+
+
+
+
+
 
 // 移动端自适应
 function mobileAdaptation() {
@@ -121,7 +127,7 @@ function createNewType() {
     $(this).attr("title", $(this).text());
   });
 
-  $("h3:contains('欲')").hide();
+
 
   $("title").text("个人书签");
   $("h1:eq(0)").text("个人书签");
@@ -277,6 +283,20 @@ function randomRgbColor() {
 
 
 
+
+// 18R设置
+function hSet() {
+  $("h3:contains('欲')").hide();
+  var $preant = $("h3:contains('世界')");
+  window.clickNum = 0;
+  $(document).on("click", $preant, function () {
+    clickNum++;
+    // console.log(clickNum);
+    if (clickNum > 2) {
+      $("h3:contains('欲')").show();
+    }
+  });
+}
 
 
 /*

@@ -1,8 +1,6 @@
 /* 移动端 */
 
-body {
-    font-size: 16px;
-}
+ 
 
 .mobilePhone #header {
     height: 5rem;
@@ -146,7 +144,7 @@ body {
     background-color: #ffffff;
 }
 
-.bookmarks-item>a:hover {
+.mobilePhone .bookmarks-item>a:hover {
     color: #6bc1ff;
 }
 

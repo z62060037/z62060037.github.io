@@ -1,9 +1,8 @@
-// seach标签外边距
-var seachMargin;
+
 
 
 $(function () {
-
+  
   // 搜索框
   searchEvent()
 
@@ -25,6 +24,7 @@ $(function () {
 
   // 玩具
   // play();
+  
 });
 
 function play() {
@@ -76,7 +76,7 @@ function play() {
       //  延迟执行多次
       var nodeUP = setInterval(function () {
         nowleft = parseInt(nowleft);
-        if(nowTop>10){
+        if (nowTop > 10) {
           nowTop = nowTop - 10;
         }
         console.log(nowTop);
@@ -98,8 +98,8 @@ function play() {
       setTimeout(function () {
         clearInterval(nodeDown);
       }, 2000);
-      
-      
+
+
 
     }
   });
@@ -143,6 +143,10 @@ function searchEvent() {
   });
 }
 
+
+// seach标签外边距
+var seachMargin;
+
 // 调整搜索框外边距
 function adjustmentMargin() {
   seachMargin = ($(window).height() - $("#collect").height() - (160)) / 2;
@@ -152,6 +156,8 @@ function adjustmentMargin() {
       "margin-bottom": "" + seachMargin + "px"
     });
   }
+
+  
 }
 
 // 主内容区内容获取
@@ -220,6 +226,10 @@ function navigationContentCreate(navData) {
 
     }
   }
+
+  $("#collect").css({
+    "border": "1px solid #e9e9e9"
+  });
 }
 
 
@@ -270,7 +280,11 @@ function bookmarksHyperlink() {
       var bookmarkData = data.navFooterData;
       for (var i = 0; i < bookmarkData.length; i++) {
         // $("#bookmarks").append("<div class='bookmarks-item'><a title='" + bookmarkData[i] + "' href='bookmarks.html?anchor=" + bookmarkData[i] + "'   target='_blank'>" + bookmarkData[i] + "</a></div>");
-        $("#bookmarks").append("<div class='bookmarks-item' hyperlink='bookmarks.html?anchor=" + bookmarkData[i] + "' couldClick='no'><a title='" + bookmarkData[i] + "'   target='_blank'>" + bookmarkData[i] + "</a></div>");
+        $("#bookmarks").append("<div class='bookmarks-item' itemName='" + bookmarkData[i] + "' couldClick='no'><a title='" + bookmarkData[i] + "'   target='_blank'>" + bookmarkData[i] + "</a></div>");
+
+        $("#bookmarks").css({
+          "box-shadow": "2px 2px 10px #ededed"
+        });
       }
     },
     error: function (data) {
@@ -288,7 +302,8 @@ function bookmarksHyperlinkVerify() {
 
   $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
     if ($(this).attr("couldClick") == "yes") {
-      var hyperlink = $(this).attr("hyperlink");
+      var itemName = $(this).attr("itemName");
+      var hyperlink="bookmarks.html?anchor="+itemName
       window.open(hyperlink);
 
     } else if ($(this).attr("couldClick") == "no") {
