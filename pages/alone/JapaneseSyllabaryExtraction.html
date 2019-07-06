@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>日语五十音随机抽取</title>
+    <title>日语五十音练习</title>
     <style>
         div {
             position: fixed;
@@ -286,8 +286,8 @@
             var hiraganaNode = document.getElementById("hiragana");
             var katakanaNode = document.getElementById("katakana");
             var index = Math.floor((Math.random() * japanFiftyTones.length));
-            hiraganaNode.textContent = japanFiftyTones[index].hiragana;
-            katakanaNode.textContent =  japanFiftyTones[index].katakana;
+            hiraganaNode.innerText = japanFiftyTones[index].hiragana;
+            katakanaNode.innerText =  japanFiftyTones[index].katakana;
             hiraganaNode.setAttribute("title",japanFiftyTones[index].syllable);
             katakanaNode.setAttribute("title",japanFiftyTones[index].syllable);
             hiraganaNode.onclick = function () { extract(); };
