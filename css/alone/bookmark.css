@@ -151,7 +151,6 @@ a:hover {
   background-color: #0082b6;
 }
 
-
 button>i {
   position: relative;
   display: inline-block;
@@ -161,14 +160,13 @@ button>i {
   margin: 8px 6px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  
 }
 
 #backTop>i {
   background-image: url("../../src/icon/bookmarks/top.png");
 }
 
-#fold>i,#reset>i {
+#fold>i, #reset>i {
   background-image: url("../../src/icon/bookmarks/fold.png");
 }
 
@@ -194,8 +192,6 @@ button:active {
   box-shadow: 0px 3px 10px 1px #d4d4d4;
   top: 2px;
 }
-
-
 
 .hide {
   display: none !important;
@@ -246,3 +242,10 @@ canvas > h2 {
   margin: 0 auto;
 } */
 
+/* 书签图标 */
+
+.icon {
+  width: 15px;
+  height: 15px;
+  margin: 7px 0;
+}

@@ -19,11 +19,25 @@ $(function () {
 
   // 18R设置
   hSet();
+
+  // 111 书签图标
+  // addIcon();
 });
 
 
+// 根据书签网页的图标数据生成图标
+function addIcon() {
 
-
+  $("body>dl:eq(0) a").each(function (index) {
+    var iconData = $(this).attr("ICON");
+    if (iconData) {
+      $(this).before(`
+        <img class="icon" src="${iconData}" alt="">
+      `);
+    }
+  });
+  
+}
 
 
 // 移动端自适应
