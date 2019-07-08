@@ -118,6 +118,8 @@
     box-shadow: none;
     padding: 0;
     margin-top: 0;
+    height: 11rem;
+    margin-bottom: 5rem;
 }
 
 .mobilePhone .bookmarks-item {
