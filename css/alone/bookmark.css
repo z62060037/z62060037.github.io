@@ -37,7 +37,7 @@ p {
 
 dt a {
   display: inline-block;
-  width: 400px;
+  max-width: 350px;
   margin: 5px 0;
   text-decoration: none;
   text-overflow: ellipsis;

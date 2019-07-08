@@ -21,7 +21,7 @@ $(function () {
   hSet();
 
   // 111 书签图标
-  // addIcon();
+  addIcon();
 });
 
 
