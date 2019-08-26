@@ -49,15 +49,15 @@
           "localIconUrl": "../../src/icon/navigation/favicon/gamersky.png"
         },
         {
-          "internetSiteName": "舰R资料库",
-          "internetSite": "http://js.ntwikis.com/",
-          "localIconUrl": "../../src/icon/navigation/favicon/netgear_favicon.png"
+          "internetSiteName": "斗鱼",
+          "internetSite": "https://www.douyu.com/room/follow",
+          "remoteIconUrl": "http://www.douyu.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/douyu.ico"
         },
         {
-          "internetSiteName": "FGO攻略站",
-          "internetSite": "https://fgo.umowang.com/",
-          "remoteIconUrl": "https://fgo.umowang.com/favicon.ico",
-          "localIconUrl": "../../src/icon/navigation/favicon/umowang.ico"
+          "internetSiteName": "碧蓝航线WIKI",
+          "internetSite": "http://wiki.joyme.com/blhx/%E9%A6%96%E9%A1%B5",
+          "remoteIconUrl": "http://wiki.joyme.com/favicon.ico"
         },
         {
           "internetSiteName": "FF14物品搜索",
@@ -66,16 +66,15 @@
           "localIconUrl": "../../src/icon/navigation/favicon/internet.png"
         },
         {
-          "internetSiteName": "知乎",
-          "internetSite": "https://www.zhihu.com/explore",
-          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/10678.png",
-          "localIconUrl": "../../src/icon/navigation/favicon/zhihu.png"
+          "internetSiteName": "FGO攻略站",
+          "internetSite": "https://fgo.umowang.com/",
+          "remoteIconUrl": "https://fgo.umowang.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/umowang.ico"
         },
         {
-          "internetSiteName": "斗鱼",
-          "internetSite": "https://www.douyu.com/room/follow",
-          "remoteIconUrl": "http://www.douyu.com/favicon.ico",
-          "localIconUrl": "../../src/icon/navigation/favicon/douyu.ico"
+          "internetSiteName": "舰R资料库",
+          "internetSite": "http://js.ntwikis.com/",
+          "localIconUrl": "../../src/icon/navigation/favicon/netgear_favicon.png"
         },
         {
           "internetSiteName": "虎牙",
@@ -106,15 +105,21 @@
           "localIconUrl": "../../src/icon/navigation/favicon/w3cschool_favicon.png"
         },
         {
-          "internetSiteName": "慕课网",
-          "internetSite": "http://www.imooc.com/u/2558739/courses",
-          "localIconUrl": "../../src/icon/navigation/favicon/imooc_favicon.png"
+          "internetSiteName": "维基百科",
+          "internetSite": "https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5",
+          "localIconUrl": "https://zh.wikipedia.org/static/favicon/wikipedia.ico"
         },
         {
           "internetSiteName": "日语五十音",
           "internetSite": "https://jp.hjenglish.com/subject/pronounce/",
           "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png",
           "localIconUrl": "../../src/icon/navigation/favicon/internet.png"
+        },
+        {
+          "internetSiteName": "知乎",
+          "internetSite": "https://www.zhihu.com/explore",
+          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/10678.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/zhihu.png"
         }
       ]
     },
@@ -138,6 +143,11 @@
           "internetSite": "https://translate.google.cn/",
           "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png",
           "localIconUrl": "../../src/icon/navigation/favicon/google.png"
+        },
+        {
+          "internetSiteName": "在线流程图 processon",
+          "internetSite": "https://www.processon.com/diagrams",
+          "remoteIconUrl": "https://www.processon.com/favicon.ico"
         },
         {
           "internetSiteName": "影之空间SS",
