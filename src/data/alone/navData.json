@@ -107,7 +107,7 @@
         {
           "internetSiteName": "维基百科",
           "internetSite": "https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5",
-          "localIconUrl": "https://zh.wikipedia.org/static/favicon/wikipedia.ico"
+          "remoteIconUrl": "https://www.wikipedia.org/static/favicon/wikipedia.ico"
         },
         {
           "internetSiteName": "日语五十音",
