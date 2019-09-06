@@ -2,7 +2,7 @@
 
 
 $(function () {
-  
+
   // 搜索框
   searchEvent()
 
@@ -24,7 +24,7 @@ $(function () {
 
   // 玩具
   // play();
-  
+
 });
 
 function play() {
@@ -157,7 +157,7 @@ function adjustmentMargin() {
     });
   }
 
-  
+
 }
 
 // 主内容区内容获取
@@ -201,29 +201,32 @@ function navigationContentCreate(navData) {
   // 检测到有图标url时添加url
   for (var k = 0; k < navData.length; k++) {
     for (var l = 0; l < navData[k].groupContent.length; l++) {
+      var internetSite = navData[k].groupContent[l].internetSite;
+      var iconUrl = "https://api.ooopn.com/ico/api.php?url=" + internetSite
+      $("[mark='" + k + "" + l + "'] i").css({
+        "background-image": "url(" + iconUrl + ")",
+        "background-size": "100% 100%"
+      });
+
+      /*
       var remoteIconUrl = navData[k].groupContent[l].remoteIconUrl;
-      var localIconUrl = navData[k].groupContent[l].localIconUrl;
-      // var iconBackgroundPosition = navData[k].groupContent[l].iconBackgroundPosition;
-      // console.log(remoteIconUrl);
+      var localIconUrl = navData[k].groupContent[l].localIconUrl; 
+
+      // 本地图标
       if (localIconUrl) {
         $("[mark='" + k + "" + l + "'] i").css({
           "background-image": "url(" + localIconUrl + ")",
           "background-size": "100% 100%"
         });
-      } else if (remoteIconUrl) {
+      } 
+      // 存储图标url
+      else if (remoteIconUrl) {
         $("[mark='" + k + "" + l + "'] i").css({
           "background-image": "url(" + remoteIconUrl + ")",
           "background-size": "100% 100%"
         });
-      }
-      /*
-        else if (iconBackgroundPosition) {
-          $("[mark='" + k + "" + l + "'] i").css({
-            "background-position": "" + iconBackgroundPosition + ""
-          });
-        }
+      } 
       */
-
     }
   }
 
@@ -303,7 +306,7 @@ function bookmarksHyperlinkVerify() {
   $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
     if ($(this).attr("couldClick") == "yes") {
       var itemName = $(this).attr("itemName");
-      var hyperlink="bookmarks.html?anchor="+itemName
+      var hyperlink = "bookmarks.html?anchor=" + itemName
       window.open(hyperlink);
 
     } else if ($(this).attr("couldClick") == "no") {
