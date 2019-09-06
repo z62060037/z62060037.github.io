@@ -177,6 +177,7 @@ function navigationDataGet() {
     },
     error: function (data) {
       console.log("数据获取失败" + data);
+      $("#collect").hide();
     }
   });
 }
@@ -201,32 +202,31 @@ function navigationContentCreate(navData) {
   // 检测到有图标url时添加url
   for (var k = 0; k < navData.length; k++) {
     for (var l = 0; l < navData[k].groupContent.length; l++) {
-      var internetSite = navData[k].groupContent[l].internetSite;
-      var iconUrl = "https://api.ooopn.com/ico/api.php?url=" + internetSite
+
+      var iconUrl = "";
+
+      var remoteIconUrl = navData[k].groupContent[l].remoteIconUrl;
+      var localIconUrl = navData[k].groupContent[l].localIconUrl;
+
+      // 本地图标
+      if (localIconUrl) {
+        iconUrl = localIconUrl;
+      }
+      // 存储图标url
+      else if (remoteIconUrl) {
+        iconUrl = remoteIconUrl;
+      }
+
       $("[mark='" + k + "" + l + "'] i").css({
         "background-image": "url(" + iconUrl + ")",
         "background-size": "100% 100%"
       });
 
-      /*
-      var remoteIconUrl = navData[k].groupContent[l].remoteIconUrl;
-      var localIconUrl = navData[k].groupContent[l].localIconUrl; 
 
-      // 本地图标
-      if (localIconUrl) {
-        $("[mark='" + k + "" + l + "'] i").css({
-          "background-image": "url(" + localIconUrl + ")",
-          "background-size": "100% 100%"
-        });
-      } 
-      // 存储图标url
-      else if (remoteIconUrl) {
-        $("[mark='" + k + "" + l + "'] i").css({
-          "background-image": "url(" + remoteIconUrl + ")",
-          "background-size": "100% 100%"
-        });
-      } 
-      */
+      /*
+       var internetSite = navData[k].groupContent[l].internetSite;
+       var iconUrl = "https://api.ooopn.com/ico/api.php?url=" + internetSite;
+       */
     }
   }
 
