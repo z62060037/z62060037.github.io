@@ -203,7 +203,7 @@ function navigationContentCreate(navData) {
   for (var k = 0; k < navData.length; k++) {
     for (var l = 0; l < navData[k].groupContent.length; l++) {
 
-      var iconUrl = "";
+      var iconUrl = "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png?3";
 
       var remoteIconUrl = navData[k].groupContent[l].remoteIconUrl;
       var localIconUrl = navData[k].groupContent[l].localIconUrl;
@@ -230,9 +230,11 @@ function navigationContentCreate(navData) {
     }
   }
 
+  /*
   $("#collect").css({
     "border": "1px solid #e9e9e9"
   });
+  */
 }
 
 
@@ -245,8 +247,12 @@ function addBackslash(pendingString) {
 
 // 时钟
 function myClock() {
+  // 月
   var mymonth = new Date().getMonth() + 1;
-  var weekday = [
+  // 日
+  var myday = new Date().getDate();
+  // 星期
+  var weekdayList = [
     "星期日",
     "星期一",
     "星期二",
@@ -256,17 +262,15 @@ function myClock() {
     "星期六"
   ];
   var myweekday = new Date().getDay();
-  var myday = new Date().getDate();
+  var weekday = weekdayList[myweekday];
+  // 时 分
   var time = new Date();
   var hour = "00" + time.getHours();
   var minute = "00" + time.getMinutes();
-  var attime =
-    hour.substring(hour.length - 2, hour.length) +
-    ":" +
-    minute.substring(minute.length - 2, minute.length);
-  $("#clock").text(
-    "" + mymonth + "月" + myday + "日 " + weekday[myweekday] + " " + attime + ""
-  );
+  var attime = hour.substring(hour.length - 2, hour.length) + ":" + minute.substring(minute.length - 2, minute.length);
+  
+  var cLockText = mymonth + "月" + myday + "日 " + weekday + " " + attime;
+  $("#clock").text(cLockText);
 }
 
 
@@ -304,16 +308,17 @@ function bookmarksHyperlinkVerify() {
 
 
   $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
-    if ($(this).attr("couldClick") == "yes") {
+    var couldClickVal=$(this).attr("couldClick");
+    if (couldClickVal == "yes") {
       var itemName = $(this).attr("itemName");
       var hyperlink = "bookmarks.html?anchor=" + itemName
       window.open(hyperlink);
 
-    } else if ($(this).attr("couldClick") == "no") {
+    } else if (couldClickVal == "no") {
       var thisOrder = $(this).index();
       var reverseOrder = $("#bookmarks>.bookmarks-item").length - thisOrder;
       accessVerify.push(reverseOrder);
-      console.log(accessVerify)
+      // console.log(accessVerify)
 
       if (accessVerify.indexOf(1) > -1 && accessVerify.indexOf(2) > -1 && accessVerify.indexOf(3) > -1) {
         $("#bookmarks>.bookmarks-item").attr("couldClick", "yes");
