@@ -150,6 +150,11 @@
           "remoteIconUrl": "https://www.processon.com/favicon.ico"
         },
         {
+          "internetSiteName": "飞云SS",
+          "internetSite": "https://www.flycloud.site/user",
+          "remoteIconUrl": "https://www.feiyun.me/favicon.ico"
+        },
+        {
           "internetSiteName": "影之空间SS",
           "internetSite": "https://yzkj.network/",
           "localIconUrl": "../../src/icon/navigation/favicon/ss_favicon.png"
