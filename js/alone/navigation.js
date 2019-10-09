@@ -13,6 +13,9 @@ $(function () {
   myClock();
   setInterval("myClock()", 60000);
 
+  // 天气
+  weather();
+
   // 底部书签超链接生成
   bookmarksHyperlink();
 
@@ -26,6 +29,41 @@ $(function () {
   // play();
 
 });
+// 天气
+function weather() {
+  // var ajaxUrl = "http://www.weather.com.cn/data/sk/101210707.html";
+  var ajaxUrl = "http://api.k780.com:88/?app=weather.today&weaid=1&&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json";
+  var ajaxData = {};
+  ajaxData.weaid = "101210707";
+  $.ajax({
+    url: ajaxUrl,
+    data: ajaxData,
+    type: "get",
+    dataType: "json",
+    async: true,
+    success: function (data) {
+      // var info = data.weatherinfo;
+      // { "weatherinfo": { "city": "乐清", "cityid": "101210707", "temp": "24.1", "WD": "西南风", "WS": "小于3级", "SD": "80%", "AP": "1007.3hPa", "njd": "暂无实况", "WSE": "<3", "time": "17:50", "sm": "2.9", "isRadar": "0", "Radar": "" } }
+      // var weatherText = info.city + " 温度：" + info.temp + " 湿度：" + info.SD +" 湿度：" + info.SD +
+
+      // {"result":{"weaid":"1194","days":"2019-10-09","week":"星期三","cityno":"leqing","citynm":"乐清","cityid":"101210707","temperature":"25℃/19℃","temperature_curr":"23℃","humidity":"69%","aqi":"-1","weather":"阴转多云","weather_curr":"阴","weather_icon":"http://api.k780.com/upload/weather/d/2.gif","weather_icon1":"","wind":"东北风","winp":"2级","temp_high":"25","temp_low":"19","temp_curr":"23","humi_high":"0","humi_low":"0","weatid":"3","weatid1":"","windid":"1","winpid":"2","weather_iconid":"2"}}
+
+      var info = data.result;
+      var weatherText = info.citynm + " 温度：" + info.temperature + " 湿度：" + info.humidity +" 天气：" + info.weather;
+      $("#weather").text(weatherText);
+
+    },
+    error: function (data) {
+      console.log("数据获取失败" + data);
+    }
+  });
+
+}
+
+
+
+
+
 
 function play() {
   $("#navigation").append(`
@@ -268,7 +306,7 @@ function myClock() {
   var hour = "00" + time.getHours();
   var minute = "00" + time.getMinutes();
   var attime = hour.substring(hour.length - 2, hour.length) + ":" + minute.substring(minute.length - 2, minute.length);
-  
+
   var cLockText = mymonth + "月" + myday + "日 " + weekday + " " + attime;
   $("#clock").text(cLockText);
 }
@@ -308,7 +346,7 @@ function bookmarksHyperlinkVerify() {
 
 
   $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
-    var couldClickVal=$(this).attr("couldClick");
+    var couldClickVal = $(this).attr("couldClick");
     if (couldClickVal == "yes") {
       var itemName = $(this).attr("itemName");
       var hyperlink = "bookmarks.html?anchor=" + itemName
