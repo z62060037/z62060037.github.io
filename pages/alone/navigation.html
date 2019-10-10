@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimum-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimum-scale=1.0">
     <link rel="shortcut icon" href="http://54lxb.com/src/img/colourstar.ico" />
     <link rel="stylesheet" type="text/css" href="../../css/alone/navigation.css" />
     <link rel="stylesheet" type="text/css" href="../../css/alone/navigation_mobile.css" />
@@ -14,23 +15,15 @@
     <!-- <div id="navigation" class="mobilePhone"> -->
     <div id="navigation">
         <div id="header">
-            <div class="header-wrap">
-                <div id="weather">
-                    <!--自动定位-->
-                    <!-- <iframe width="125" scrolling="no" height="25" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23&bdc=%23&icon=1&wind=0&num=1"></iframe> -->
-                    <!--默认  横线 黑 透明无边框 经典 16 温州 未来1天  宽170  高25  不显示风力-->
-                    <!-- <iframe width="144" scrolling="no" height="25" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&icon=1&py=wenzhou&wind=1&num=1&site=16"></iframe> -->
-                </div>
-
-                <div id="clock"></div>
-            </div>
+            <div id="weather" class="header_item"></div>
+            <div id="clock" class="header_item"></div>
         </div>
         <div id="content">
             <div id="seach">
                 <!--百度搜索框代码-->
 
-                <form id="baiduSeach" class=" seach_from" onSubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu"
-                    target="_blank">
+                <form id="baiduSeach" class=" seach_from" onSubmit="return baiduWithHttps(this)"
+                    action="http://www.baidu.com/baidu" target="_blank">
                     <i id="bd_logo" class="seach_logo" alt="切换搜索引擎"></i>
 
                     <!-- <input class="b_ipt" type="text" onfocus="checkHttps" name="word" ng-model="seachWord" placeholder="{{seachWord}}"> -->
@@ -38,8 +31,9 @@
                     <input id="b_btn" class="seach_button " type="submit" value="百度">
                 </form>
                 <!--谷歌搜索框代码-->
-                <form id="googleSeach" class="seach_from" method="get" action="http://www.google.com/search" target="_blank">
-                    <i id="google_logo" class="seach_logo"  alt="切换搜索引擎"></i>
+                <form id="googleSeach" class="seach_from" method="get" action="http://www.google.com/search"
+                    target="_blank">
+                    <i id="google_logo" class="seach_logo" alt="切换搜索引擎"></i>
                     <!-- <input class="g_ipt" type="text" name="q" value="" ng-model="seachWord" placeholder="{{seachWord}}"> -->
                     <input id="g_ipt" class="seach_input " type="text" name="q" value="" placeholder="">
                     <input id="g_btn" class="seach_button " type="submit" name="btnG" value="Google">

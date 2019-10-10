@@ -49,7 +49,11 @@ function weather() {
       // {"result":{"weaid":"1194","days":"2019-10-09","week":"星期三","cityno":"leqing","citynm":"乐清","cityid":"101210707","temperature":"25℃/19℃","temperature_curr":"23℃","humidity":"69%","aqi":"-1","weather":"阴转多云","weather_curr":"阴","weather_icon":"http://api.k780.com/upload/weather/d/2.gif","weather_icon1":"","wind":"东北风","winp":"2级","temp_high":"25","temp_low":"19","temp_curr":"23","humi_high":"0","humi_low":"0","weatid":"3","weatid1":"","windid":"1","winpid":"2","weather_iconid":"2"}}
 
       var info = data.result;
-      var weatherText = info.citynm + " 温度：" + info.temperature + " 湿度：" + info.humidity +" 天气：" + info.weather;
+      var weatherText = info.citynm + " " + info.weather + " " + info.temperature + " " + info.humidity + " " + info.wind;
+      if (mobileAjuge()) {
+        // 移动端显示简要天气
+        weatherText = info.citynm + " " + info.weather + " " + info.temperature;
+      }
       $("#weather").text(weatherText);
 
     },
@@ -398,12 +402,20 @@ $(window).scroll(function () {
 
 // 移动端自适应
 function mobileAdaptation() {
+  if (mobileAjuge()) {
+    $("#navigation").addClass("mobilePhone");
+  }
+}
+
+// 移动端判断
+function mobileAjuge() {
   // alert(navigator.userAgent);
   // 检测userAgent
   if (navigator.userAgent.match(/(Windows)/i)) {
     // Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
     // Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+    return false;
   } else {
-    $("#navigation").addClass("mobilePhone");
+    return true;
   }
 }

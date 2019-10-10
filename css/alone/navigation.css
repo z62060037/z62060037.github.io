@@ -28,38 +28,25 @@ body {
   width: 100%;
 }
 
-#header-wrap {
-  height: 100%;
-  margin: 0 30px;
-}
-
-/*
-.s_top_wrap iframe {
-  float: left;
-  margin: 5 10px;
-  font-size: 16px;
-}
-*/
-
-#weather {
+.header_item {
   position: absolute;
   display: inline-block;
-  left: 13px;
-  height: 25px;
   overflow: hidden;
-  margin-top: 2px;
+  border: 0px;
+  font-size: 16px;
+  width: 49%;
+  line-height: 30px;
+  color: #555;
+}
+
+#weather {
+  left: 1%;
+  text-align: left;
 }
 
 #clock {
-  position: absolute;
-  display: inline-block;
-  right: 0;
-  width: 180px;
-  height: 30px;
-  font-size: 16px;
-  color: #333;
-  border: 0px;
-  line-height: 30px;
+  right: 1%;
+  text-align: right;
 }
 
 #content, .s-content {
