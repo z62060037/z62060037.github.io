@@ -38,9 +38,14 @@
     left: 0;
 }
 
+
+
+
 .mobilePhone #content>#seach {
-    margin-top: 20px;
-    margin-bottom: 40px;
+    /* margin-top: 20px;
+    margin-bottom: 40px; */
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .mobilePhone #content>#seach>.seach_from {
@@ -49,56 +54,31 @@
 
 .mobilePhone #content>#seach>.seach_from>.seach_logo {
     margin: 0;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .mobilePhone #content>#seach>.seach_from>.seach_logo>i{
-    height: 50px;
-    width: 50px;
+    /* height: 50px;
+    width: 50px; */
 }
 
 .mobilePhone #content>#seach>.seach_from>.seach_input {
-    width: 65%;
+    width: 60%;
+    /* width: 65%; */
     margin: 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .mobilePhone #content>#seach>.seach_from>.seach_button {
     width: 20%;
     margin: 0;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
-/*
 
-.mobilePhone #seach {
-    margin-top: 10rem !important;
-    margin-bottom: 10rem !important;
-}
 
-.mobilePhone .seach_from {
-    height: 6rem;
-    width: 100%;
-}
 
-.mobilePhone .seach_logo {
-    height: 5rem;
-    width: 5rem;
-}
 
-.mobilePhone .seach_input {
-    width: 35rem;
-    height: 5rem;
-    border: 2px solid #c5c4c4;
-}
-
-.mobilePhone .seach_button {
-    width: 10rem;
-    height: 5.4rem;
-    font-size: 2rem;
-    line-height: 5rem;
-    letter-spacing: 3px;
-}
 
 .mobilePhone #collect {
     box-shadow: none;
@@ -205,4 +185,3 @@
     border-color: #aeaeae;
     background-color: #ccc;
 }
-*/
