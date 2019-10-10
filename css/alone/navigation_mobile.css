@@ -162,6 +162,8 @@
     width: 100%;
     margin: 0;
     left: 0;
+    margin-bottom: 25px;
+    box-shadow: none !important;
 }
 
 .mobilePhone .bookmarks-item {
