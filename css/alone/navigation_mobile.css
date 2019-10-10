@@ -27,11 +27,10 @@
     float: left;
     line-height: 20px;
 }
-.mobilePhone #weather{
 
+.mobilePhone #weather {
     margin-top: 3px;
 }
-
 
 .mobilePhone #content {
     width: 100%;
@@ -40,8 +39,8 @@
 }
 
 .mobilePhone #content>#seach {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .mobilePhone #content>#seach>.seach_from {
@@ -50,15 +49,24 @@
 
 .mobilePhone #content>#seach>.seach_from>.seach_logo {
     margin: 0;
+    width: 100%;
+}
+
+.mobilePhone #content>#seach>.seach_from>.seach_logo>i{
+    height: 50px;
+    width: 50px;
 }
 
 .mobilePhone #content>#seach>.seach_from>.seach_input {
-    width: 60%;
+    width: 65%;
     margin: 0;
+    margin-top: 20px;
 }
 
 .mobilePhone #content>#seach>.seach_from>.seach_button {
     width: 20%;
+    margin: 0;
+    margin-top: 20px;
 }
 
 /*

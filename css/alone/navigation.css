@@ -97,12 +97,17 @@ body {
   display: none;
 }
 
-.seach_logo {
+.seach_logo{
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.seach_logo>i {
   position: relative;
   display: inline-block;
   height: 40px;
   width: 40px;
-  margin: 0 10px;
   background-position: 0 0;
   background-size: 100% 100%;
 }
@@ -111,11 +116,11 @@ body {
   cursor: pointer;
 }
 
-#bd_logo {
+#bd_logo>i {
   background-image: url(../../src/icon/navigation/seach/bd_logo.png);
 }
 
-#google_logo {
+#google_logo>i {
   background-image: url(../../src/icon/navigation/seach/google_logo.jpg);
 }
 
