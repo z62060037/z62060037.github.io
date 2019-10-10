@@ -1,46 +1,58 @@
 /* 移动端 */
 
-.mobilePhone {}
+.mobilePhone {
+    overflow: hidden;
+    position: fixed;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
 
 .mobilePhone #header {
     min-width: auto;
     white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 46px;
 }
 
-.mobilePhone .header_item {
-    width: 47%;
+.mobilePhone #header>.header_item {
+    width: 100%;
+    position: relative;
+    left: auto;
+    right: auto;
+    text-align: center;
+    overflow: auto;
+    float: left;
+    line-height: 20px;
+}
+.mobilePhone #weather{
+
+    margin-top: 3px;
 }
 
-.mobilePhone #weather {
-    left: 3%;
-    text-align: left;
-}
 
-.mobilePhone #clock {
-    right: 3%;
-    text-align: left;
-}
-
-.mobilePhone #content{
+.mobilePhone #content {
     width: 100%;
     margin: 0;
     left: 0;
 }
 
-.mobilePhone #content>#seach{
+.mobilePhone #content>#seach {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.mobilePhone #content>#seach>.seach_from{
+.mobilePhone #content>#seach>.seach_from {
     width: 100%;
 }
 
-.mobilePhone #content>#seach>.seach_from>.seach_logo{
-    /* width: 20%; */
+.mobilePhone #content>#seach>.seach_from>.seach_logo {
+    margin: 0;
 }
 
-.mobilePhone #content>#seach>.seach_from>.seach_input{
+.mobilePhone #content>#seach>.seach_from>.seach_input {
     width: 60%;
     margin: 0;
 }
@@ -48,7 +60,6 @@
 .mobilePhone #content>#seach>.seach_from>.seach_button {
     width: 20%;
 }
-
 
 /*
 
