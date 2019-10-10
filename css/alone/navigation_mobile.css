@@ -1,31 +1,56 @@
 /* 移动端 */
 
-.mobilePhone{
-    
+.mobilePhone {}
+
+.mobilePhone #header {
+    min-width: auto;
+    white-space: nowrap;
 }
+
+.mobilePhone .header_item {
+    width: 47%;
+}
+
+.mobilePhone #weather {
+    left: 3%;
+    text-align: left;
+}
+
+.mobilePhone #clock {
+    right: 3%;
+    text-align: left;
+}
+
+.mobilePhone #content{
+    width: 100%;
+    margin: 0;
+    left: 0;
+}
+
+.mobilePhone #content>#seach{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mobilePhone #content>#seach>.seach_from{
+    width: 100%;
+}
+
+.mobilePhone #content>#seach>.seach_from>.seach_logo{
+    /* width: 20%; */
+}
+
+.mobilePhone #content>#seach>.seach_from>.seach_input{
+    width: 60%;
+    margin: 0;
+}
+
+.mobilePhone #content>#seach>.seach_from>.seach_button {
+    width: 20%;
+}
+
 
 /*
-.mobilePhone #header {
-    height: 5rem;
-}
-
-.mobilePhone #header #weather {
-    height: 4rem;
-    width: 5rem;
-    margin-top: 4rem;
-    margin-left: 6rem;
-    transform: scale(3, 3);
-    display: none;
-}
-
-.mobilePhone #header #clock {
-    font-size: 1.5rem;
-    width: 50%;
-    line-height: 2rem;
-    height: 5rem;
-    padding-top: 0.5rem;
-    text-align: center;
-}
 
 .mobilePhone #seach {
     margin-top: 10rem !important;
