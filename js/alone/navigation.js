@@ -204,11 +204,11 @@ function adjustmentMargin() {
 
 // 主内容区内容获取
 function navigationDataGet() {
+  var ajaxUrl="../../src/data/alone/navData.json";
+  var ajaxUrl="http://54lxb.com/src/data/alone/navData.json";
   $.ajax({
-    url: "../../src/data/alone/navData.json",
-    // url: ajaxUrlPrefix + ajaxUrlSuffix,
+    url: ajaxUrl,
     type: "get",
-    // data: ajaxData,
     dataType: "json",
     async: true,
     success: function (data) {
@@ -318,14 +318,16 @@ function myClock() {
 
 // 底部书签超链接生成
 function bookmarksHyperlink() {
+  var ajaxUrl="../../src/data/alone/navData.json";
+  var ajaxUrl="http://54lxb.com/src/data/alone/navData.json";
+
   $.ajax({
-    url: "../../src/data/alone/navData.json",
-    // url: ajaxUrlPrefix + ajaxUrlSuffix,
+    url: ajaxUrl,
     type: "get",
-    // data: ajaxData,
     dataType: "json",
     async: true,
     success: function (data) {
+      
       var bookmarkData = data.navFooterData;
       for (var i = 0; i < bookmarkData.length; i++) {
         // $("#bookmarks").append("<div class='bookmarks-item'><a title='" + bookmarkData[i] + "' href='bookmarks.html?anchor=" + bookmarkData[i] + "'   target='_blank'>" + bookmarkData[i] + "</a></div>");
