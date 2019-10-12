@@ -355,7 +355,7 @@ function bookmarksHyperlinkVerify() {
     var couldClickVal = $(this).attr("couldClick");
     if (couldClickVal == "yes") {
       var itemName = $(this).attr("itemName");
-      var hyperlink = "bookmarks.html?anchor=" + itemName
+      var hyperlink = "bookmarks_simple.html?anchor=" + itemName
       window.open(hyperlink);
 
     } else if (couldClickVal == "no") {
