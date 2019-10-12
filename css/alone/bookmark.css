@@ -14,7 +14,7 @@ body {
 
 /* 书签主体样式 */
 
-body>dl>dd {
+body dl {
   margin: 0;
 }
 

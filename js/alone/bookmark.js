@@ -36,7 +36,7 @@ function addIcon() {
       `);
     }
   });
-  
+
 }
 
 
@@ -51,8 +51,10 @@ function mobileAdaptation() {
 
 // 添加顶栏工具
 function addHeaderContent() {
-  $("#header").html(`
-  
+
+
+  $("h1").eq(0).before(`
+  <div id="header">
   <div id="tool_filling"></div>
 
   <div id="tool" class="tool">
@@ -84,7 +86,7 @@ function addHeaderContent() {
           </button>
       </div>
   </div>
-  
+  </div>
   
   
   `)
@@ -97,7 +99,6 @@ function addHeaderContent() {
 // 创建新样式
 function createNewType() {
   // 删除无用内容
-  $("h1:eq(0)").text("bookmarks");
   $("dl:eq(0)>dd:eq(0)").remove();
 
   // 收藏夹手风琴效果
