@@ -407,7 +407,7 @@ function mobileAdaptation() {
   if (mobileAjuge()) {
     $("#navigation").addClass("mobilePhone_S");
     // 设备屏幕宽度
-    var mobileWidth = document.body.scrollWidth;
+    var mobileWidth = window.screen.width;
     alert("设备屏幕宽度"+mobileWidth);
 
     if($("#navigation").width()>800){
