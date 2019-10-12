@@ -18,7 +18,7 @@ $(function () {
   autoExpand();
 
   // 18R设置
-  hSet();
+  hideSet();
 
   // 111 书签图标
   addIcon();
@@ -300,15 +300,15 @@ function randomRgbColor() {
 
 
 // 18R设置
-function hSet() {
-  $("h3:contains('欲')").hide();
-  var $preant = $("h3:contains('世界')");
+function hideSet() {
+  $("h3:contains('里番'),h3:contains('真人'),h3:contains('H漫')").hide();
+  // $("").hide();
+  // $("").hide();
   window.clickNum = 0;
-  $(document).on("click", $preant, function () {
+  $(document).on("click", ".tool_item>button", function () {
     clickNum++;
-    // console.log(clickNum);
-    if (clickNum > 2) {
-      $("h3:contains('欲')").show();
+    if (clickNum > 4) {
+      $("h3:contains('里番'),h3:contains('真人'),h3:contains('H漫')").show();
     }
   });
 }
