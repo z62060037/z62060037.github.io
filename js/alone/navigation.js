@@ -406,8 +406,10 @@ $(window).scroll(function () {
 function mobileAdaptation() {
   if (mobileAjuge()) {
     $("#navigation").addClass("mobilePhone_S");
-    
-    alert("页面宽度"+$("#navigation").width());
+    // 设备屏幕宽度
+    var mobileWidth = document.body.scrollWidth;
+    alert("设备屏幕宽度"+mobileWidth);
+
     if($("#navigation").width()>800){
       $("#navigation").addClass("mobilePhone_M");
     }

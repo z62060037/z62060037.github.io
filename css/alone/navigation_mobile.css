@@ -5,7 +5,8 @@
     /* overflow: hidden;
     position: fixed; */
     display: inline-block;
-    width: 100%;
+    /* width: 100%; */
+    width: 375px;
     height: 100%;
     overflow-x: hidden;
 }
