@@ -405,7 +405,12 @@ $(window).scroll(function () {
 // 移动端自适应
 function mobileAdaptation() {
   if (mobileAjuge()) {
-    $("#navigation").addClass("mobilePhone");
+    $("#navigation").addClass("mobilePhone_S");
+    
+    alert("页面宽度"+$("#navigation").width());
+    if($("#navigation").width()>800){
+      $("#navigation").addClass("mobilePhone_M");
+    }
   }
 }
 

@@ -1,6 +1,6 @@
-/* 移动端 */
+/* 移动端窄屏 */
 
-.mobilePhone {
+.mobilePhone_S {
     position: relative;
     /* overflow: hidden;
     position: fixed; */
@@ -10,7 +10,7 @@
     overflow-x: hidden;
 }
 
-.mobilePhone #header {
+.mobilePhone_S #header {
     min-width: auto;
     white-space: nowrap;
     position: relative;
@@ -19,7 +19,7 @@
     height: 46px;
 }
 
-.mobilePhone #header>.header_item {
+.mobilePhone_S #header>.header_item {
     width: 100%;
     position: relative;
     left: auto;
@@ -30,48 +30,46 @@
     line-height: 20px;
 }
 
-.mobilePhone #weather {
+.mobilePhone_S #weather {
     margin-top: 3px;
 }
 
-.mobilePhone #content {
+.mobilePhone_S #content {
     width: 100%;
     margin: 0;
     left: 0;
 }
 
 
-
-
-.mobilePhone #content>#seach {
+.mobilePhone_S #content>#seach {
     /* margin-top: 20px;
     margin-bottom: 40px; */
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.mobilePhone #content>#seach>.seach_from {
+.mobilePhone_S #content>#seach>.seach_from {
     width: 100%;
 }
 
-.mobilePhone #content>#seach>.seach_from>.seach_logo {
+.mobilePhone_S #content>#seach>.seach_from>.seach_logo {
     margin: 0;
     /* width: 100%; */
 }
 
-.mobilePhone #content>#seach>.seach_from>.seach_logo>i{
+.mobilePhone_S #content>#seach>.seach_from>.seach_logo>i{
     /* height: 50px;
     width: 50px; */
 }
 
-.mobilePhone #content>#seach>.seach_from>.seach_input {
+.mobilePhone_S #content>#seach>.seach_from>.seach_input {
     width: 60%;
     /* width: 65%; */
     margin: 0;
     /* margin-top: 20px; */
 }
 
-.mobilePhone #content>#seach>.seach_from>.seach_button {
+.mobilePhone_S #content>#seach>.seach_from>.seach_button {
     width: 20%;
     margin: 0;
     /* margin-top: 20px; */
@@ -79,10 +77,7 @@
 
 
 
-
-
-
-.mobilePhone #collect {
+.mobilePhone_S #collect {
     box-shadow: none;
     border: none;
     width: 100%;
@@ -90,33 +85,31 @@
     padding: 0;
 }
 
-.mobilePhone #collect>.nav-group {
+.mobilePhone_S #collect>.nav-group {
     width: 100%;
 }
 
 
-.mobilePhone .nav-group-name {
+.mobilePhone_S .nav-group-name {
     display: none;
     width: 100%;
 }
 
-.mobilePhone .nav-group-name-text {
+.mobilePhone_S .nav-group-name-text {
     font-size: 4rem;
     text-align: center;
     height: 6rem;
     line-height: 6rem;
 }
 
-.mobilePhone .nav-group-content {
+.mobilePhone_S .nav-group-content {
     display: block;
     width: 100%;
 }
 
 
 
-
-
-.mobilePhone .nav-group-unit {
+.mobilePhone_S .nav-group-unit {
     width: 25%;
     height: 85px;
     border: none;
@@ -124,18 +117,18 @@
     display: inline-block;
 }
 
-.mobilePhone .nav-group-unit:hover {
+.mobilePhone_S .nav-group-unit:hover {
     background-color: #ffffff00;
 }
 
 
-.mobilePhone .del-icon {
+.mobilePhone_S .del-icon {
     width: 100%;
     padding: 0;
     height: 50px;
 }
 
-.mobilePhone .del-icon>i {
+.mobilePhone_S .del-icon>i {
     width: 20px;
     height: 20px;
     margin: 0 10px;
@@ -147,7 +140,7 @@
     background-color: #ffffff;
 }
 
-.mobilePhone .nav-text {
+.mobilePhone_S .nav-text {
     width: 100%;
     height: 20px;
     padding: 0;
@@ -156,7 +149,7 @@
     line-height: 20px;
 }
 
-.mobilePhone #bookmarks {
+.mobilePhone_S #bookmarks {
     padding: 0;
     height: 100px;
     width: 100%;
@@ -166,17 +159,17 @@
     box-shadow: none !important;
 }
 
-.mobilePhone .bookmarks-item {
+.mobilePhone_S .bookmarks-item {
     width: 25%;
     margin: 0;
     border: none;
 }
 
-.mobilePhone .bookmarks-item:hover {
+.mobilePhone_S .bookmarks-item:hover {
     background-color: #ffffff;
 }
 
-.mobilePhone .bookmarks-item>a {
+.mobilePhone_S .bookmarks-item>a {
     position: relative;
     display: inline-block;
     width: 80%;
@@ -189,15 +182,38 @@
     border-radius: 5px;
 }
 
-.mobilePhone .bookmarks-item>a:hover {
+.mobilePhone_S .bookmarks-item>a:hover {
     color: #6bc1ff;
 }
 
-.mobilePhone .bookmarks-item[couldClick='no'] {
+.mobilePhone_S .bookmarks-item[couldClick='no'] {
     background-color: #ffffff;
 }
 
-.mobilePhone .bookmarks-item[couldClick='no']>a {
+.mobilePhone_S .bookmarks-item[couldClick='no']>a {
     border-color: #aeaeae;
     background-color: #ccc;
+}
+
+
+
+/*=============== 移动端宽屏 =============== */
+
+.mobilePhone_M #header>.header_item {
+    width: auto;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.mobilePhone_M #weather {
+    margin-top: 3px;
+}
+
+.mobilePhone_M #weather {
+    margin-top:0 ;
+}
+
+.mobilePhone #header{
+
+    height: 25px;
 }
