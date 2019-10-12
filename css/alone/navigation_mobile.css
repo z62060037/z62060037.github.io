@@ -5,8 +5,8 @@
     /* overflow: hidden;
     position: fixed; */
     display: inline-block;
-    /* width: 100%; */
-    width: 375px;
+    width: 100%;
+    /* width: 375px; */
     height: 100%;
     overflow-x: hidden;
 }
@@ -41,7 +41,6 @@
     left: 0;
 }
 
-
 .mobilePhone_S #content>#seach {
     /* margin-top: 20px;
     margin-bottom: 40px; */
@@ -58,7 +57,7 @@
     /* width: 100%; */
 }
 
-.mobilePhone_S #content>#seach>.seach_from>.seach_logo>i{
+.mobilePhone_S #content>#seach>.seach_from>.seach_logo>i {
     /* height: 50px;
     width: 50px; */
 }
@@ -76,8 +75,6 @@
     /* margin-top: 20px; */
 }
 
-
-
 .mobilePhone_S #collect {
     box-shadow: none;
     border: none;
@@ -89,7 +86,6 @@
 .mobilePhone_S #collect>.nav-group {
     width: 100%;
 }
-
 
 .mobilePhone_S .nav-group-name {
     display: none;
@@ -108,8 +104,6 @@
     width: 100%;
 }
 
-
-
 .mobilePhone_S .nav-group-unit {
     width: 25%;
     height: 85px;
@@ -121,7 +115,6 @@
 .mobilePhone_S .nav-group-unit:hover {
     background-color: #ffffff00;
 }
-
 
 .mobilePhone_S .del-icon {
     width: 100%;
@@ -151,17 +144,17 @@
 }
 
 .mobilePhone_S #bookmarks {
-    padding: 0;
     height: 100px;
     width: 100%;
     margin: 0;
+    padding: 0 3.5%;
     left: 0;
     margin-bottom: 25px;
     box-shadow: none !important;
 }
 
 .mobilePhone_S .bookmarks-item {
-    width: 25%;
+    width: 23%;
     margin: 0;
     border: none;
 }
@@ -174,7 +167,7 @@
     position: relative;
     display: inline-block;
     width: 80%;
-    padding: 0;
+    padding: 0 3%;
     margin: 5px 10%;
     font-size: 16px;
     text-align: center;
@@ -196,25 +189,46 @@
     background-color: #ccc;
 }
 
-
-
 /*=============== 移动端宽屏 =============== */
 
 .mobilePhone_M #header>.header_item {
-    width: auto;
-    font-size: 12px;
-    line-height: 25px;
+    width: 50%;
+    font-size: 15px;
+    line-height: 30px;
 }
 
 .mobilePhone_M #weather {
-    margin-top: 3px;
+    margin-top: 0;
+    text-indent: 10px;
+    text-align: left;
 }
 
-.mobilePhone_M #weather {
-    margin-top:0 ;
+.mobilePhone_M #clock {
+    text-align: right;
+    text-indent: 10px;
 }
 
-.mobilePhone #header{
+.mobilePhone_M #header {
+    height: 30px;
+}
 
-    height: 25px;
+.mobilePhone_M .nav-text {
+    font-size: 13px;
+}
+
+.mobilePhone_M .nav-group-unit {
+    width: 19%;
+}
+
+.mobilePhone_M #collect {
+    padding: 0 3%;
+}
+
+#center {
+    position: fixed;
+    width: 50%;
+    border-right: 1px solid #000;
+    height: 100%;
+    display: inline-block;
+    z-index: 999;
 }
