@@ -7,13 +7,18 @@ from bs4 import BeautifulSoup
 from lxml import etree
 
 def read():
+    filePath='bookmarks.html'
+    filePath_simple='bookmarks_simple.html'
+    if not os.path.isfile(filePath):
+        filePath='./pages/alone/bookmarks.html'
+        filePath_simple='./pages/alone/bookmarks_simple.html'
     # 读取
-    with open('./pages/alone/bookmarks.html', 'r', encoding='utf8') as f:
+    with open(filePath, 'r', encoding='utf8') as f:
         content=f.read()
         # print(content)
         content=process(content)
         # 保存
-        with open('./pages/alone/bookmarks_simple.html', 'w',encoding='utf-8') as f:
+        with open(filePath_simple, 'w',encoding='utf-8') as f:
             f.write(content)
 
 def process(content):
