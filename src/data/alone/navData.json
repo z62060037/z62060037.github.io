@@ -165,10 +165,9 @@
       "groupName": "图像",
       "groupContent": [
         {
-          "internetSiteName": "tineye",
-          "internetSite": "https://www.tineye.com/",
-          "remoteIconUrl": "https://www.tineye.com/favicon.ico",
-          "localIconUrl": "../../src/icon/navigation/favicon/tineye.ico"
+          "internetSiteName": "yandex",
+          "internetSite": "https://www.yandex.com/images/",
+          "remoteIconUrl": "https://www.yandex.com/favicon.ico"
         },
         {
           "internetSiteName": "Multi",
@@ -193,6 +192,12 @@
           "internetSite": "https://www.google.com.hk/imghp?hl=zh-CN&amp;tab=wi",
           "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/8510.png",
           "localIconUrl": "../../src/icon/navigation/favicon/google.png"
+        },
+        {
+          "internetSiteName": "tineye",
+          "internetSite": "https://www.tineye.com/",
+          "remoteIconUrl": "https://www.tineye.com/favicon.ico",
+          "localIconUrl": "../../src/icon/navigation/favicon/tineye.ico"
         }
       ]
     },
@@ -224,7 +229,14 @@
       ]
     }
   ],
-  "navFooterData":[
-    "前端","学习","实用","图片","影音","设备","软件","素材"
+  "navFooterData": [
+    "前端",
+    "学习",
+    "实用",
+    "图片",
+    "影音",
+    "设备",
+    "软件",
+    "素材"
   ]
 }
