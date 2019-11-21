@@ -127,37 +127,20 @@
       "groupName": "工具",
       "groupContent": [
         {
-          "internetSiteName": "菜鸟工具",
-          "internetSite": "https://c.runoob.com/",
-          "remoteIconUrl": "http://cdn.static.runoob.com/images/favicon.ico",
-          "localIconUrl": "../../src/icon/navigation/favicon/runoob.ico"
-        },
-        {
-          "internetSiteName": "Web在线编辑器",
-          "internetSite": "https://c.runoob.com/front-end/61",
-          "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png",
-          "localIconUrl": "../../src/icon/navigation/favicon/runoob.ico"
-        },
-        {
           "internetSiteName": "谷歌翻译",
           "internetSite": "https://translate.google.cn/",
           "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png",
           "localIconUrl": "../../src/icon/navigation/favicon/google.png"
         },
         {
-          "internetSiteName": "在线流程图 processon",
-          "internetSite": "https://www.processon.com/diagrams",
-          "remoteIconUrl": "https://www.processon.com/favicon.ico"
-        },
-        {
           "internetSiteName": "飞云SS",
-          "internetSite": "https://www.flycloud.pw/user",
-          "remoteIconUrl": "https://www.feiyun.me/favicon.ico"
-        },
+          "internetSite": "https://www.flycloud.gg/",
+          "remoteIconUrl": "https://www.flycloud.gg/favicon.ico"
+        } ,
         {
-          "internetSiteName": "影之空间SS",
-          "internetSite": "https://yzkj.network/",
-          "localIconUrl": "../../src/icon/navigation/favicon/ss_favicon.png"
+          "internetSiteName": "史莱姆搜索 ",
+          "internetSite": "http://www.slimego.cn/",
+          "remoteIconUrl": "http://www.slimego.cn/images/favicon.ico"
         }
       ]
     },
@@ -215,7 +198,12 @@
           "internetSite": "https://www.jd.com/",
           "remoteIconUrl": "https://ss1.bdstatic.com/lvoZeXSm1A5BphGlnYG/icon/95541.png",
           "localIconUrl": "../../src/icon/navigation/favicon/iqdb.png"
-        }
+        },
+        {
+          "internetSiteName": "比价",
+          "internetSite": "http://www.manmanbuy.com/",
+          "remoteIconUrl": "http://www.manmanbuy.com//favicon.ico"
+        } 
       ]
     },
     {
