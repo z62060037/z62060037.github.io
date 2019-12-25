@@ -10,8 +10,8 @@ def read():
     filePath='bookmarks.html'
     filePath_simple='bookmarks_simple.html'
     if not os.path.isfile(filePath):
-        filePath='./pages/alone/bookmarks.html'
-        filePath_simple='./pages/alone/bookmarks_simple.html'
+        filePath='./pages/main/bookmarks.html'
+        filePath_simple='./pages/main/bookmarks_simple.html'
     # 读取
     with open(filePath, 'r', encoding='utf8') as f:
         content=f.read()
@@ -34,7 +34,7 @@ def process(content):
     date=str(datetime.datetime.now().year)+str(datetime.datetime.now().month)+str(datetime.datetime.now().day)
 
     # 节点后插入内容
-    insertContent='<!--个人_'+str(date)+'--><meta charset="utf-8"><link rel="shortcut icon" href="http://54lxb.com/src/img/colourstar.ico" /><link rel="stylesheet" href="../../css/alone/bookmark.css"><link rel="stylesheet" href="../../css/alone/bookmark_mobile.css"><script src="../../plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script><script src="../../js/alone/bookmark.js"></script>'
+    insertContent='<!--个人_'+str(date)+'--><meta charset="utf-8"><link rel="shortcut icon" href="http://54lxb.com/src/img/colourstar.ico" /><link rel="stylesheet" href="./bookmark.css"><link rel="stylesheet" href="./bookmark_mobile.css"><script src="../../plugins/jquery-v3.3.1/jquery-v3.3.1.min.js"></script><script src="./bookmark.js"></script>'
     insertContent= BeautifulSoup(insertContent, 'html5lib')
     
     titleNode.insert_after(insertContent)

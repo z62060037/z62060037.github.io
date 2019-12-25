@@ -204,8 +204,8 @@ function adjustmentMargin() {
 
 // 主内容区内容获取
 function navigationDataGet() {
-  // var ajaxUrl="../../src/data/alone/navData.json";
-  var ajaxUrl = "http://54lxb.com/src/data/alone/navData.json";
+  // var ajaxUrl="../../src/data/main/navData.json";
+  var ajaxUrl = "http://54lxb.com/src/data/main/navData.json";
   $.ajax({
     url: ajaxUrl,
     type: "get",
@@ -318,8 +318,8 @@ function myClock() {
 
 // 底部书签超链接生成
 function bookmarksHyperlink() {
-  // var ajaxUrl="../../src/data/alone/navData.json";
-  var ajaxUrl = "http://54lxb.com/src/data/alone/navData.json";
+  // var ajaxUrl="../../src/data/main/navData.json";
+  var ajaxUrl = "http://54lxb.com/src/data/main/navData.json";
 
   $.ajax({
     url: ajaxUrl,

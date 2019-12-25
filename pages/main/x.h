@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Resume</title>
     <link rel="shortcut icon" href="http://54lxb.com/img/favicon/colourstar.ico" />
-    <link rel="stylesheet" href="../../css/alone/resume.css">
+    <link rel="stylesheet" href="./resume.css">
     
 </head>
 
@@ -138,8 +138,8 @@
 
     <canvas id="bg_canvas"></canvas>
 
-    <script src="../../plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script>
-    <script src="../../js/alone/resume.js"></script>
+    <script src="../../plugins/jquery-v3.3.1/jquery-v3.3.1.min.js"></script>
+    <script src="./resume.js"></script>
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
     <![endif]-->
