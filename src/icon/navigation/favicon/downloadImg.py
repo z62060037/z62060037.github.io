@@ -41,7 +41,7 @@ def downLoadImg(imgName,imgUrl):
 
 
 # 读取json文件
-with open('../../../data/main/navData.json', 'r', encoding='utf8') as f:
+with open('../../../data/navData.json', 'r', encoding='utf8') as f:
     jsonData=json.load(f)
     navConetntData=jsonData["navConetntData"]
     for index,value in enumerate(navConetntData):
