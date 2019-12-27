@@ -249,3 +249,11 @@ canvas > h2 {
   height: 15px;
   margin: 7px 0;
 }
+
+
+/* 宽度过小时，隐藏控制键文字 */
+@media screen and (max-width: 560px) {
+  .tool_item>button>span {
+      display: none;
+  }
+}
