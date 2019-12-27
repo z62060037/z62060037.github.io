@@ -1,14 +1,34 @@
 
 
-
 $(function () {
 
-  // 搜索框
-  searchEvent()
+  var para = {};
 
-  // 主内容区内容获取
-  navigationDataGet();
+  // 页面创建
+  pageCreate(para);
 
+  // 页面按钮
+  pageButton(para);
+
+
+});
+
+function pageCreate(para) {
+   // 顶栏
+   header();
+
+  // 主内容区内容
+  navContent(); 
+  
+  // 底部书签内容
+  bookmarksContent();
+
+  // 移动端自适应
+  mobileAdaptation();
+}
+
+// 顶栏
+function header() {
   // 时钟
   myClock();
   setInterval("myClock()", 60000);
@@ -16,19 +36,53 @@ $(function () {
   // 天气
   weather();
 
-  // 底部书签超链接生成
-  bookmarksHyperlink();
+}
+
+function pageButton() {
+
+  // 搜索框内容同步
+  $("#seach input").on('input propertychange', function () {
+    $("#b_ipt,#g_ipt").val($(this).val());
+  });
+
+  //  切换搜索引擎
+  $("#bd_logo").click(function () {
+    $("#baiduSeach").css("display", "none");
+    $("#googleSeach").css("display", "inline-block");
+  });
+  $("#google_logo").click(function () {
+    $("#googleSeach").css("display", "none");
+    $("#baiduSeach").css("display", "inline-block");
+  });
 
   //  底部书签超链接验证
-  bookmarksHyperlinkVerify();
+  var accessVerify = [];
 
-  // 移动端自适应
-  mobileAdaptation();
 
-  // 玩具
-  // play();
 
-});
+  $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
+    var couldClickVal = $(this).attr("couldClick");
+    if (couldClickVal == "yes") {
+      var itemName = $(this).attr("itemName");
+      var hyperlink = "bookmarks_simple.html?anchor=" + itemName
+      window.open(hyperlink);
+
+    } else if (couldClickVal == "no") {
+      var thisOrder = $(this).index();
+      var reverseOrder = $("#bookmarks>.bookmarks-item").length - thisOrder;
+      accessVerify.push(reverseOrder);
+      // console.log(accessVerify)
+
+      if (accessVerify.indexOf(1) > -1 && accessVerify.indexOf(2) > -1 && accessVerify.indexOf(3) > -1) {
+        $("#bookmarks>.bookmarks-item").attr("couldClick", "yes");
+      }
+
+      // layer.msg('无权限', { icon: 2, time: 1000 });
+    }
+  });
+
+}
+
 // 天气
 function weather() {
   // var ajaxUrl = "http://www.weather.com.cn/data/sk/101210707.html";
@@ -64,146 +118,8 @@ function weather() {
 
 }
 
-
-
-
-
-
-function play() {
-  $("#navigation").append(`
-    <div id="play"></div>
-  `)
-
-  // 按键监听
-  $(document).keydown(function (event) {
-    // if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
-    //     console.log('按下了← ↑ ↓ →');
-    // }
-    // if (event.keyCode == 13) {
-    //     console.log('按下了Enter');
-    // }
-
-    console.log('按下了：' + event.keyCode);
-
-    var $playNode = $("#play");
-
-    if (event.keyCode == 37) {
-      console.log('按下了← ');
-      // 获取现在的位置
-      var nowleft = $playNode.css("left");
-      nowleft = parseInt(nowleft);
-      if (nowleft > 10) {
-        nowleft = nowleft - 10;
-      }
-      $playNode.css("left", nowleft + "px");
-
-    }
-
-    if (event.keyCode == 39) {
-      console.log('按下了→ ');
-      // 获取现在的位置
-      var nowleft = $playNode.css("left");
-      nowleft = parseInt(nowleft);
-      nowleft = nowleft + 10;
-      $playNode.css("left", nowleft + "px");
-
-    }
-
-    if (event.keyCode == 32) {
-      console.log('按下了空格 ');
-      // 获取现在的位置
-      var nowTop = $playNode.css("top");
-      nowTop = parseInt(nowTop);
-
-      //  延迟执行多次
-      var nodeUP = setInterval(function () {
-        nowleft = parseInt(nowleft);
-        if (nowTop > 10) {
-          nowTop = nowTop - 10;
-        }
-        console.log(nowTop);
-        $playNode.css("top", nowTop + "px");
-      }, 100);
-
-      // 取消延迟执行多次
-      setTimeout(function () {
-        clearInterval(nodeUP);
-      }, 2000);
-
-      //  延迟执行多次
-      var nodeDown = setInterval(function () {
-        nowleft = parseInt(nowleft);
-        nowTop = nowTop + 10;
-        $playNode.css("top", nowTop + "px");
-      }, 100);
-      // 取消延迟执行多次
-      setTimeout(function () {
-        clearInterval(nodeDown);
-      }, 2000);
-
-
-
-    }
-  });
-
-}
-
-// 跳跃
-function playJump() {
-  var $playNode = $("#play");
-
-
-
-
-}
-
-
-
-
-
-// 搜索框
-function searchEvent() {
-  // 搜索框内容同步
-  $("#seach input").on('input propertychange', function () {
-    $("#b_ipt,#g_ipt").val($(this).val());
-  });
-
-
-  //  切换搜索引擎
-  $("#bd_logo").click(function () {
-    $("#baiduSeach").css("display", "none");
-    $("#googleSeach").css("display", "inline-block");
-  });
-  $("#google_logo").click(function () {
-    $("#googleSeach").css("display", "none");
-    $("#baiduSeach").css("display", "inline-block");
-  });
-
-  // 调整搜索框外边距
-  $(window).resize(function () {
-    adjustmentMargin();
-  });
-}
-
-
-// seach标签外边距
-var seachMargin;
-
-// 调整搜索框外边距
-function adjustmentMargin() {
-  seachMargin = ($(window).height() - $("#collect").height() - (160)) / 2;
-  if (seachMargin > 30) {
-    $("#seach").css({
-      "margin-top": "" + seachMargin + "px",
-      "margin-bottom": "" + seachMargin + "px"
-    });
-  }
-
-
-}
-
-// 主内容区内容获取
-function navigationDataGet() {
+// 主内容区内容
+function navContent() {
   // var ajaxUrl="../../src/data/main/navData.json";
   var ajaxUrl = "http://54lxb.com/src/data/navData.json";
   $.ajax({
@@ -216,12 +132,29 @@ function navigationDataGet() {
 
       // 调整seach标签外边距
       adjustmentMargin();
+
+      // 调整搜索框外边距
+      $(window).resize(function () {
+        adjustmentMargin();
+      });
     },
     error: function (data) {
       console.log("数据获取失败" + data);
       $("#collect").hide();
     }
   });
+}
+
+// 调整搜索框外边距
+function adjustmentMargin() {
+  // seach标签外边距
+  var seachMargin = ($(window).height() - $("#collect").height() - (160)) / 2;
+  if (seachMargin > 30) {
+    $("#seach").css({
+      "margin-top": "" + seachMargin + "px",
+      "margin-bottom": "" + seachMargin + "px"
+    });
+  }
 }
 
 // 主内容区a标签生成
@@ -316,8 +249,8 @@ function myClock() {
 }
 
 
-// 底部书签超链接生成
-function bookmarksHyperlink() {
+// 底部书签内容
+function bookmarksContent() {
   // var ajaxUrl="../../src/data/main/navData.json";
   var ajaxUrl = "http://54lxb.com/src/data/navData.json";
 
@@ -344,50 +277,45 @@ function bookmarksHyperlink() {
   });
 }
 
-// 111 底部书签超链接验证
-function bookmarksHyperlinkVerify() {
 
-  var accessVerify = [];
+// 移动端自适应
+function mobileAdaptation() {
+  if (mobileAjuge()) {
+    $("#navigation").addClass("mobilePhone_S");
+    $("#navigation").addClass("mobilePhone_M");
 
+  }
+}
 
-
-  $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
-    var couldClickVal = $(this).attr("couldClick");
-    if (couldClickVal == "yes") {
-      var itemName = $(this).attr("itemName");
-      var hyperlink = "bookmarks_simple.html?anchor=" + itemName
-      window.open(hyperlink);
-
-    } else if (couldClickVal == "no") {
-      var thisOrder = $(this).index();
-      var reverseOrder = $("#bookmarks>.bookmarks-item").length - thisOrder;
-      accessVerify.push(reverseOrder);
-      // console.log(accessVerify)
-
-      if (accessVerify.indexOf(1) > -1 && accessVerify.indexOf(2) > -1 && accessVerify.indexOf(3) > -1) {
-        $("#bookmarks>.bookmarks-item").attr("couldClick", "yes");
-      }
-
-      // layer.msg('无权限', { icon: 2, time: 1000 });
-    }
-  });
-
-
+// 移动端判断
+function mobileAjuge() {
+  var ajuge = navigator.userAgent.match(/(Windows)/i);
+  // 检测userAgent
+  if (ajuge) {
+    // Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
+    // Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
+    return false;
+  } else {
+    return true;
+  }
 }
 
 
 
-//页面上下滚动出现下拉标志
-// $(".arrow").hide();
-// $(window).scroll(function() {
-//   if ($(this).scrollTop() > 20) {
-//   $(".arrow").show();
-//   }else{
-//     $(".arrow").hide();
-//   }
-// });
 
 /*
+
+//页面上下滚动出现下拉标志
+$(".arrow").hide();
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 20) {
+  $(".arrow").show();
+  }else{
+    $(".arrow").hide();
+  }
+});
+
+
 //底部加载新页面
 $(window).scroll(function () {
   var scrollTop = $(this).scrollTop();
@@ -398,32 +326,98 @@ $(window).scroll(function () {
     // window.open("bookmark.html");
     // $(".bookmarks_css").load("bookmark.html");
   }
-});*/
+});
 
 
 
-// 移动端自适应
-function mobileAdaptation() {
-  if (mobileAjuge()) {
-    $("#navigation").addClass("mobilePhone_S");
-    // 设备屏幕宽度
-    // var mobileWidth = window.screen.width;
-    // alert("window.screen.width"+window.screen.width);
-    // if ($("#navigation").width() > 800) { }
-    $("#navigation").addClass("mobilePhone_M");
 
-  }
+
+function play() {
+  $("#navigation").append(`
+    <div id="play"></div>
+  `)
+
+  // 按键监听
+  $(document).keydown(function (event) {
+    // if (event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40) {
+    //     console.log('按下了← ↑ ↓ →');
+    // }
+    // if (event.keyCode == 13) {
+    //     console.log('按下了Enter');
+    // }
+
+    console.log('按下了：' + event.keyCode);
+
+    var $playNode = $("#play");
+
+    if (event.keyCode == 37) {
+      console.log('按下了← ');
+      // 获取现在的位置
+      var nowleft = $playNode.css("left");
+      nowleft = parseInt(nowleft);
+      if (nowleft > 10) {
+        nowleft = nowleft - 10;
+      }
+      $playNode.css("left", nowleft + "px");
+
+    }
+
+    if (event.keyCode == 39) {
+      console.log('按下了→ ');
+      // 获取现在的位置
+      var nowleft = $playNode.css("left");
+      nowleft = parseInt(nowleft);
+      nowleft = nowleft + 10;
+      $playNode.css("left", nowleft + "px");
+
+    }
+
+    if (event.keyCode == 32) {
+      console.log('按下了空格 ');
+      // 获取现在的位置
+      var nowTop = $playNode.css("top");
+      nowTop = parseInt(nowTop);
+
+      //  延迟执行多次
+      var nodeUP = setInterval(function () {
+        nowleft = parseInt(nowleft);
+        if (nowTop > 10) {
+          nowTop = nowTop - 10;
+        }
+        console.log(nowTop);
+        $playNode.css("top", nowTop + "px");
+      }, 100);
+
+      // 取消延迟执行多次
+      setTimeout(function () {
+        clearInterval(nodeUP);
+      }, 2000);
+
+      //  延迟执行多次
+      var nodeDown = setInterval(function () {
+        nowleft = parseInt(nowleft);
+        nowTop = nowTop + 10;
+        $playNode.css("top", nowTop + "px");
+      }, 100);
+      // 取消延迟执行多次
+      setTimeout(function () {
+        clearInterval(nodeDown);
+      }, 2000);
+
+
+
+    }
+  });
+
 }
 
-// 移动端判断
-function mobileAjuge() {
-  // alert(navigator.userAgent);
-  // 检测userAgent
-  if (navigator.userAgent.match(/(Windows)/i)) {
-    // Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:64.0) Gecko/20100101 Firefox/64.0
-    // Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36
-    return false;
-  } else {
-    return true;
-  }
-}
+
+
+
+
+
+
+
+
+
+*/
