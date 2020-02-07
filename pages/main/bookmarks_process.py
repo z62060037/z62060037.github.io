@@ -34,7 +34,7 @@ def process(content):
     date=str(datetime.datetime.now().year)+str(datetime.datetime.now().month)+str(datetime.datetime.now().day)
 
     # 节点后插入内容
-    insertContent='<!--个人_'+str(date)+'--><meta charset="utf-8"><link rel="shortcut icon" href="http://54lxb.com/src/img/colourstar.ico" /><link rel="stylesheet" href="./bookmarks_simple.css"><link rel="stylesheet" href="./bookmarks_simple_mobile.css"><script src="../../plugins/zepto-v1.2.0/zepto-v1.2.0.min.js"></script><script src="./bookmarks_simple.js"></script>'
+    insertContent='<!--个人_'+str(date)+'--><meta charset="utf-8"><link rel="shortcut icon" href="http://54lxb.com/src/img/colourstar.ico" /><link rel="stylesheet" href="./bookmarks_simple.css"><link rel="stylesheet" href="./bookmarks_simple_mobile.css"><script src="../../plugins/jquery-v3.3.1/jquery-v3.3.1.min.js"></script><script src="./bookmarks_simple.js"></script>'
     insertContent= BeautifulSoup(insertContent, 'html5lib')
     
     titleNode.insert_after(insertContent)
