@@ -7,40 +7,76 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>日语五十音练习</title>
     <style>
-        div {
+        #header {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 2rem
+        }
+
+        #title {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            color: #3c8cff;
+        }
+
+        #content {
             position: fixed;
             display: inline-block;
+            width: 5rem;
+            height: 7rem;
             left: 50%;
             top: 50%;
-            margin-left: -30px;
-            margin-top: -80px;
+            margin-left: -2.5rem;
+            margin-top: -3.5rem;
+
         }
 
-        h1 {
+
+        #hiragana,
+        #katakana {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 3rem;
+            color: #3c8cff;
             text-align: center;
+            font-size: 2rem;
         }
 
-        h1:hover {
-            cursor: pointer;
-        }
 
-        button {
-            width: 65px;
-            height: 30px;
+
+        #extractButton {
+            position: relative;
+            display: block;
+            width: 5rem;
+            height: 2.5rem;
             border: 1px solid #3c8cff;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 1.5rem;
+            line-height: 2.5rem;
             color: #fff;
             background-color: #3c8cff;
+            margin-top: 1rem;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div>
-        <h1 id="hiragana"></h1>
-        <h1 id="katakana"></h1>
-        <button id="extractButton">抽取</button>
+        <div id="header">
+            <div id="title">
+                五十音测验
+            </div>
+        </div>
+        <div id="content">
+            <div id="hiragana">-</div>
+            <div id="katakana">-</div>
+            <div id="extractButton">抽取</div>
+        </div>
     </div>
 
     <script>
@@ -277,7 +313,7 @@
             }
         ];
 
-            
+
 
         // 抽取
         extract();
@@ -287,9 +323,9 @@
             var katakanaNode = document.getElementById("katakana");
             var index = Math.floor((Math.random() * japanFiftyTones.length));
             hiraganaNode.innerText = japanFiftyTones[index].hiragana;
-            katakanaNode.innerText =  japanFiftyTones[index].katakana;
-            hiraganaNode.setAttribute("title",japanFiftyTones[index].syllable);
-            katakanaNode.setAttribute("title",japanFiftyTones[index].syllable);
+            katakanaNode.innerText = japanFiftyTones[index].katakana;
+            hiraganaNode.setAttribute("title", japanFiftyTones[index].syllable);
+            katakanaNode.setAttribute("title", japanFiftyTones[index].syllable);
             hiraganaNode.onclick = function () { extract(); };
             katakanaNode.onclick = function () { extract(); };
         }
