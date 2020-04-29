@@ -23,7 +23,7 @@ function createNewType() {
   for (var mub = 0; mub < listNum()[0].length; mub++) {
     $("h3[ADD_DATE='" + listNum()[0] + "']:eq('" + mub + "')").attr(
       "id",
-      "a" + (mub + 1) + ""
+      "a" + (mub + 1)
     );
   }
 
