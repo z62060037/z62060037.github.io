@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <script src="js/jquery.min.js"></script> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <title>404 Not Found</title>
     <style type="text/css">
         body {
@@ -46,7 +45,6 @@
         .fhsy {
             width: 160px;
             font-size: 1.4em;
-            font-weight: bold;
             margin: 25px auto 20px;
             color: #009bc2;
             text-decoration: none;
@@ -74,31 +72,44 @@
     </div>
     <canvas id="bg_canvas"></canvas>
     <script type="text/javascript">
+        (function () {
+            init();
+        })();
+  
+        function init() {
 
-        var canvas = document.getElementById("bg_canvas");
-        var ctx = canvas.getContext("2d");
-        var bg_canvas = document.getElementById("#c");
-        var w, h;
-        var pi = Math.PI;
-        var all_attribute = {
-            num: 70, // 个数
-            start_probability: 0.1, // 如果数量小于num，有这些几率添加一个新的     		     
-            radius_min: 1, // 初始半径最小值
-            radius_max: 2, // 初始半径最大值
-            radius_add_min: .3, // 半径增加最小值
-            radius_add_max: .5, // 半径增加最大值
-            opacity_min: 0.3, // 初始透明度最小值
-            opacity_max: 0.5, // 初始透明度最大值
-            opacity_prev_min: .003, // 透明度递减值最小值
-            opacity_prev_max: .005, // 透明度递减值最大值
-            light_min: 40, // 颜色亮度最小值
-            light_max: 70, // 颜色亮度最大值
-        } ;
+            window.canvas = document.getElementById("bg_canvas");
+            window.ctx = canvas.getContext("2d");
+            window.bg_canvas = document.getElementById("#c");
+            window.w, window.h;
+            window.pi = Math.PI;
+            window.all_attribute = {
+                num: 70, // 个数
+                start_probability: 0.1, // 如果数量小于num，有这些几率添加一个新的     		     
+                radius_min: 1, // 初始半径最小值
+                radius_max: 2, // 初始半径最大值
+                radius_add_min: .3, // 半径增加最小值
+                radius_add_max: .5, // 半径增加最大值
+                opacity_min: 0.3, // 初始透明度最小值
+                opacity_max: 0.5, // 初始透明度最大值
+                opacity_prev_min: .003, // 透明度递减值最小值
+                opacity_prev_max: .005, // 透明度递减值最大值
+                light_min: 40, // 颜色亮度最小值
+                light_max: 70, // 颜色亮度最大值
+            };
 
-        
-        var style_color = find_random(0, 360);
-        var all_element = [];
-        window_resize();
+
+            window.style_color = find_random(0, 360);
+            window.all_element = [];
+            window_resize();
+
+            window.onresize = function () {
+                window_resize();
+            }
+            timeSet();
+            start();
+        }
+
         function start() {
             window.requestAnimationFrame(start);
             style_color += .1;
@@ -151,13 +162,16 @@
             canvas.width = w;
             canvas.height = h;
         }
-        window.onresize = function () {
-            window_resize();
-        }
+
+
         function find_random(num_one, num_two) {
             return Math.random() * (num_two - num_one) + num_one;
         }
-        (function () {
+
+
+        function timeSet() {
+
+
             var lastTime = 0;
             var vendors = ['webkit', 'moz'];
             for (var xx = 0;
@@ -184,11 +198,9 @@
                 window.cancelAnimationFrame = function (id) {
                     clearTimeout(id);
                 }
-                    ;
             }
         }
-            ());
-        start();
+
 
 
 
