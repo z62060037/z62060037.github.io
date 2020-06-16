@@ -22,6 +22,27 @@
       ]
     },
     {
+      "groupName": "工具",
+      "groupContent": [
+        {
+          "internetSiteName": "谷歌翻译",
+          "internetSite": "https://translate.google.cn/",
+          "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/google.png"
+        },
+        {
+          "internetSiteName": "史莱姆搜索 ",
+          "internetSite": "http://www.slimego.cn/",
+          "remoteIconUrl": "http://www.slimego.cn/images/favicon.ico"
+        },
+        {
+          "internetSiteName": "云翼",
+          "internetSite": "https://www.cloud-wing.net/user/node",
+          "remoteIconUrl": "https://www.cloud-wing.net/favicon.ico"
+        }
+      ]
+    },
+    {
       "groupName": "浏览",
       "groupContent": [
         {
@@ -56,8 +77,8 @@
         },
         {
           "internetSiteName": "碧蓝航线WIKI",
-          "internetSite": "http://wiki.joyme.com/blhx/%E9%A6%96%E9%A1%B5",
-          "remoteIconUrl": "http://wiki.joyme.com/favicon.ico"
+          "internetSite": "https://wiki.biligame.com/blhx/%E9%A6%96%E9%A1%B5",
+          "remoteIconUrl": "https://dss1.bdstatic.com/5aAHeD3nKgcUp2HgoI7O1ygwehsv/media/ch1000/png/导航List_bilibili.png"
         },
         {
           "internetSiteName": "FF14物品搜索",
@@ -114,33 +135,6 @@
           "internetSite": "https://jp.hjenglish.com/subject/pronounce/",
           "remoteIconUrl": "https://ss0.bdstatic.com/k4oZeXSm1A5BphGlnYG/icon/6000.png",
           "localIconUrl": "../../src/icon/navigation/favicon/internet.png"
-        },
-        {
-          "internetSiteName": "知乎",
-          "internetSite": "https://www.zhihu.com/explore",
-          "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/10678.png",
-          "localIconUrl": "../../src/icon/navigation/favicon/zhihu.png"
-        }
-      ]
-    },
-    {
-      "groupName": "工具",
-      "groupContent": [
-        {
-          "internetSiteName": "谷歌翻译",
-          "internetSite": "https://translate.google.cn/",
-          "remoteIconUrl": "https://ss3.bdstatic.com/lPoZeXSm1A5BphGlnYG/icon/8507.png",
-          "localIconUrl": "../../src/icon/navigation/favicon/google.png"
-        },
-        {
-          "internetSiteName": "飞云SS",
-          "internetSite": "https://www.flycloud.gg/",
-          "remoteIconUrl": "https://www.flycloud.gg/favicon.ico"
-        } ,
-        {
-          "internetSiteName": "史莱姆搜索 ",
-          "internetSite": "http://www.slimego.cn/",
-          "remoteIconUrl": "http://www.slimego.cn/images/favicon.ico"
         }
       ]
     },
@@ -165,12 +159,6 @@
           "localIconUrl": "../../src/icon/navigation/favicon/saucenao.bmp"
         },
         {
-          "internetSiteName": "Pixiv",
-          "internetSite": "http://www.pixiv.net/",
-          "remoteIconUrl": "https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/81260.png",
-          "localIconUrl": "../../src/icon/navigation/favicon/pixiv.png"
-        },
-        {
           "internetSiteName": "谷歌图片",
           "internetSite": "https://www.google.com.hk/imghp?hl=zh-CN&amp;tab=wi",
           "remoteIconUrl": "https://ss2.bdstatic.com/lfoZeXSm1A5BphGlnYG/icon/8510.png",
@@ -181,6 +169,32 @@
           "internetSite": "https://www.tineye.com/",
           "remoteIconUrl": "https://www.tineye.com/favicon.ico",
           "localIconUrl": "../../src/icon/navigation/favicon/tineye.ico"
+        },
+        {
+          "internetSiteName": "artstation",
+          "internetSite": "https://www.artstation.com/",
+          "remoteIconUrl": "https://www.artstation.com/favicon.ico"
+        },
+        {
+          "internetSiteName": "sankakucomplex",
+          "internetSite": "https://chan.sankakucomplex.com/",
+          "remoteIconUrl": "https://chan.sankakucomplex.com/favicon.ico"
+        },
+        {
+          "internetSiteName": "sankakucomplex",
+          "internetSite": "https://chan.sankakucomplex.com/",
+          "remoteIconUrl": "https://chan.sankakucomplex.com/favicon.ico"
+        },
+        {
+          "internetSiteName": "Pixiv",
+          "internetSite": "http://www.pixiv.net/",
+          "remoteIconUrl": "https://ss0.bdstatic.com/l4oZeXSm1A5BphGlnYG/icon/81260.png",
+          "localIconUrl": "../../src/icon/navigation/favicon/pixiv.png"
+        },
+        {
+          "internetSiteName": "danbooru",
+          "internetSite": "https://danbooru.donmai.us/",
+          "remoteIconUrl": "https://danbooru.donmai.us/favicon.ico"
         }
       ]
     },
@@ -202,8 +216,13 @@
         {
           "internetSiteName": "比价",
           "internetSite": "http://www.manmanbuy.com/",
-          "remoteIconUrl": "http://www.manmanbuy.com//favicon.ico"
-        } 
+          "remoteIconUrl": "http://www.manmanbuy.com/favicon.ico"
+        },
+        {
+          "internetSiteName": "历史价格查询",
+          "internetSite": "http://www.lsjgcx.com/",
+          "remoteIconUrl": "http://www.lsjgcx.com/favicon.ico"
+        }
       ]
     },
     {
