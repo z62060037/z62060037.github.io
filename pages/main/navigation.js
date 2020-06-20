@@ -23,7 +23,7 @@ function pageCreate(para) {
   // 底部书签内容
   bookmarksContent();
 
-  // 移动端自适应
+  // 桌面端移动端差异
   mobileAdaptation();
 
 
@@ -81,24 +81,7 @@ function pageButton() {
     }
   });
 
-
-
-  if (mobileAjuge()) {
-    // 移动端显示底部书签快捷进入方式
-    $("#bookmarks").removeClass("hide");
-  }
-  else { 
-    // 桌面端显示侧边栏书签
-    $(document).on("mouseenter", "#sidebar_event", function (e) {
-      $("#sidebar").removeClass("hide");
-    });
-
-    $(document).on("mouseleave", "#sidebar", function (e) {
-      $("#sidebar").addClass("hide");
-    });
-
-
-  }
+ 
 
 }
 
@@ -297,11 +280,26 @@ function bookmarksContent() {
 }
 
 
-// 移动端自适应
+ // 桌面端移动端差异
 function mobileAdaptation() {
   if (mobileAjuge()) {
+    // 移动端样式
     $("#navigation").addClass("mobilePhone_S");
     $("#navigation").addClass("mobilePhone_M");
+
+    // 移动端显示底部书签快捷进入方式
+    $("#bookmarks").removeClass("hide");
+  }
+  else { 
+    // 桌面端显示侧边栏书签
+    $(document).on("mouseenter", "#sidebar_event", function (e) {
+      $("#sidebar").removeClass("hide");
+    });
+
+    $(document).on("mouseleave", "#sidebar", function (e) {
+      $("#sidebar").addClass("hide");
+    });
+
 
   }
 }
