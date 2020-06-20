@@ -10,7 +10,7 @@ $(function () {
 
   // 页面按钮
   pageButton(para);
- 
+
 
 });
 
@@ -211,23 +211,36 @@ function autoExpand() {
   //  根据navigation.html页面携带的参数，打开相应菜单。
   var url = window.document.location.href.toString();
   var urlPara = getUrlPara(url, "anchor");
-  // 将参数转换为中文
-  anchorText = decodeURI(decodeURI(urlPara));
-  $("h3:contains(" + anchorText + ")").click();
+  if (urlPara.length > 0) {
+    // 将参数转换为中文
+    anchorText = decodeURI(decodeURI(urlPara));
+    console.log("anchorText:"+anchorText);
+    if(anchorText=="导航页侧边栏书签"){
+      $("body").addClass("sidebar");
+    }else{
+      $("h3:contains(" + anchorText + ")").click();
+    }
+
+    
+  }
 }
 
 
 
 // 获取url参数
 function getUrlPara(url, key) {
-  var paras = (url.split("?")[1]).split("&");
-  for (var i = 0; i < paras.length; i++) {
-    var urlParaKey = paras[i].split("=");
-    if (urlParaKey[0] == key) {
-      return urlParaKey[1];
+  if (url.indexOf("bookmarks_simple.html") > -1) {
+    var paras = (url.split("?")[1]).split("&");
+    for (var i = 0; i < paras.length; i++) {
+      var urlParaKey = paras[i].split("=");
+      if (urlParaKey[0] == key) {
+        return urlParaKey[1];
+      }
     }
+    return "";
+  } else {
+    return "";
   }
-  return "";
 }
 
 

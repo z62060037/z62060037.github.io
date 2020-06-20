@@ -1,0 +1,26 @@
+.sidebar {
+    width: 100%;
+    min-width: auto;
+}
+
+.sidebar h1{
+    font-size: 20px;
+}
+
+.sidebar h3{
+    margin: 8px 15px;
+}
+
+.sidebar dt a{
+    width: 90%;
+    margin: 0px 5%;
+}
+
+.sidebar #bookmarkSearch{
+    width: 60%;
+}
+ 
+.sidebar #bookmarkSearch #bookmarkSearch_input{
+    width: 90%;
+}
+ 

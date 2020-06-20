@@ -14,17 +14,19 @@ $(function () {
 });
 
 function pageCreate(para) {
-   // 顶栏
-   header();
+  // 顶栏
+  header();
 
   // 主内容区内容
-  navContent(); 
-  
+  navContent();
+
   // 底部书签内容
   bookmarksContent();
 
   // 移动端自适应
   mobileAdaptation();
+
+
 }
 
 // 顶栏
@@ -58,8 +60,6 @@ function pageButton() {
   //  底部书签超链接验证
   var accessVerify = [];
 
-
-
   $(document).on("click", "#bookmarks>.bookmarks-item", function (e) {
     var couldClickVal = $(this).attr("couldClick");
     if (couldClickVal == "yes") {
@@ -80,6 +80,25 @@ function pageButton() {
       // layer.msg('无权限', { icon: 2, time: 1000 });
     }
   });
+
+
+
+  if (mobileAjuge()) {
+    // 移动端显示底部书签快捷进入方式
+    $("#bookmarks").removeClass("hide");
+  }
+  else { 
+    // 桌面端显示侧边栏书签
+    $(document).on("mouseenter", "#sidebar_event", function (e) {
+      $("#sidebar").removeClass("hide");
+    });
+
+    $(document).on("mouseleave", "#sidebar", function (e) {
+      $("#sidebar").addClass("hide");
+    });
+
+
+  }
 
 }
 
