@@ -81,7 +81,21 @@ function pageButton() {
     }
   });
 
- 
+
+  // 侧边栏 书签验证
+  var sidebarVerify = [];
+  $(document).on("mouseenter", ".nav-group-unit", function (e) {
+    if ($("#sidebar").attr("status") == "hide") {
+      var markVal = $(this).attr("mark");
+      if (sidebarVerify.indexOf(markVal) == -1) {
+        sidebarVerify.push(markVal);
+      }
+      if (sidebarVerify.indexOf("00") > -1 && sidebarVerify.indexOf("01") > -1 && sidebarVerify.indexOf("02") > -1) {
+        $("#sidebar").attr("status", "show");
+      }
+    }
+  });
+
 
 }
 
@@ -167,7 +181,7 @@ function navigationContentCreate(navData) {
     var row = " ";
     for (var j = 0; j < navData[i].groupContent.length; j++) {
       var single = " ";
-      single = "<div mark='" + i + "" + j + "' class='nav-group-unit'><a title='" + navData[i].groupContent[j].internetSiteName + "' href='" + navData[i].groupContent[j].internetSite + "' target='_blank'><div class='del-icon'><i class='' alt='" + navData[i].groupContent[j].internetSiteName + "' class='nav-icon'></i></div><div class='nav-text'>" + navData[i].groupContent[j].internetSiteName + "</div></a></div>";
+      single = "<div mark='" + i + "" + j + "' class='nav-group-unit'><a title='" + navData[i].groupContent[j].internetSiteName + "' href='" + navData[i].groupContent[j].internetSite + "' target='_blank'><div class='del-icon'><span class='nav-icon-span hide'>" + navData[i].groupContent[j].internetSiteName[0] + "</span><i class='nav-icon' alt=''></i></div><div class='nav-text'>" + navData[i].groupContent[j].internetSiteName + "</div></a></div>";
       row += single;
     }
 
@@ -194,7 +208,11 @@ function navigationContentCreate(navData) {
         iconUrl = remoteIconUrl;
       }
 
+      var iconText = navData[k].groupContent[l].internetSiteName[0];
+
+
       $("[mark='" + k + "" + l + "'] i").css({
+
         "background-image": "url(" + iconUrl + ")",
         "background-size": "100% 100%"
       });
@@ -207,6 +225,7 @@ function navigationContentCreate(navData) {
     }
   }
 
+  // 检测图标是否加载 
   /*
   $("#collect").css({
     "border": "1px solid #e9e9e9"
@@ -280,7 +299,7 @@ function bookmarksContent() {
 }
 
 
- // 桌面端移动端差异
+// 桌面端移动端差异
 function mobileAdaptation() {
   if (mobileAjuge()) {
     // 移动端样式
@@ -290,10 +309,12 @@ function mobileAdaptation() {
     // 移动端显示底部书签快捷进入方式
     $("#bookmarks").removeClass("hide");
   }
-  else { 
+  else {
     // 桌面端显示侧边栏书签
     $(document).on("mouseenter", "#sidebar_event", function (e) {
-      $("#sidebar").removeClass("hide");
+      if ($("#sidebar").attr("status") == "show") {
+        $("#sidebar").removeClass("hide");
+      }
     });
 
     $(document).on("mouseleave", "#sidebar", function (e) {
