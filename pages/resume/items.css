@@ -1,0 +1,8 @@
+.items_content_item {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
